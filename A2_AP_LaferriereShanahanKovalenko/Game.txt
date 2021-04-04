@@ -1,0 +1,1 @@
+Test$This is reading in a string$You have made this choice.$
