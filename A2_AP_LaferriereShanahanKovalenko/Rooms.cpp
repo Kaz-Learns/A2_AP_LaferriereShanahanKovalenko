@@ -15,10 +15,12 @@ void Rooms::m_setUpRoom(string key, string name, string description)
     m_roomKey = key;
     m_roomName = name;
     m_roomDescripton = description;
+    //Will need item as well
+
 
     for (int i = 0; i < 3; i++)
     {
-        m_neighbourKeys[i] = "N/A";
+        m_neighbourKeys[i] = "NULL";
     }
 }
 
@@ -33,7 +35,7 @@ bool Rooms::m_canUsePath(ChoicePath direction)
 {
     for (int i = 0; i < 3; i++)
     {
-        if (direction == ChoicePath(i) && m_neighbourKeys[i] != "N/A")
+        if (direction == ChoicePath(i) && m_neighbourKeys[i] != "NULL")
         {
             return true;
         }

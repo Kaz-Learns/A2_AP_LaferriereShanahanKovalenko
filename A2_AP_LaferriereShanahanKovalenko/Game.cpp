@@ -19,6 +19,9 @@ void Game::m_RunGame()
 {
     while (!m_isCreated)
     {
+        m_pCurrentRoom->m_displayRoom();
+
+
 
     }
 }
