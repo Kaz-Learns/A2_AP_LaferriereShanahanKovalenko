@@ -36,8 +36,6 @@ struct Rooms
 	string m_getKey();
 	void m_displayRoom();
 
-	bool m_firstEnter,
-		m_dead;
 	string m_roomKey,
 		m_roomName,
 		m_storyLine1,

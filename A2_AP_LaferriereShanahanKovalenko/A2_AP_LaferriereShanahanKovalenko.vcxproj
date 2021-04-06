@@ -143,6 +143,7 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Location.h" />
+    <ClInclude Include="Puzzle.h" />
     <ClInclude Include="Rooms.h" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +151,7 @@
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Puzzle.cpp" />
     <ClCompile Include="Rooms.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

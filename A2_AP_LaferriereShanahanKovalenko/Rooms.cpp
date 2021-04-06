@@ -20,7 +20,7 @@ void Rooms::m_setUpRoom(string key, string name, string story1, string story2, s
     m_roomDescription = description;
     m_roomItem = item;
     m_roomPuzzle = puzzle;
-    m_dead = death;
+    m_roomDeath = death;
 
     for (int i = 0; i < 3; i++)
     {

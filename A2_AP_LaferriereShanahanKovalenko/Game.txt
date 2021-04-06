@@ -196,10 +196,11 @@ DEATH NULL
 ROOMEND
 PUZZLESTART
 WIRES
-You approach the wires, and notice they have all been cut. There is a diagram on the inside of the keypad cover, showing 3 coloured wires.
-In the diagram the LEFT wire is PURPLE, the MIDDLE wire is GREEN and the RIGHT wire is ORANGE.
-You look at the wires in front of you on the top row: the left wire is red, the middle wire is blue and the right wire is yellow.
-The bottom row is the same as the top row. You decide to take the bottom row wires and connect them to the top row.
+You approach the wires, and notice they are all intact but one. You inspect the wires and their colours.
+The top row: the left wire is red, the middle wire is blue and the right wire is yellow.
+The bottom row: the left wire is blue, the middle wire is yellow and the right wire is missing.
+You see a 3 coloured wires hanging down that are red, blue and yellow. You think carefully before choosing one to connect to the yellow wire...
+SOLUTION RED
 PUZZLEEND
 PUZZLESTART
 WALKIE-TALKIE
@@ -207,6 +208,7 @@ You pick up the walkie-talkie, press the button and say "Hello?".
 A creepy voice answers you, sending chills down your spine.
 "I don't have eyes, but once I did see. Once I had thoughts, but now I'm white and empty. I am a ..?"
 You think carefully before answering...
+SOLUTION SKULL
 PUZZLEEND
 PUZZLESTART
 COMPUTER
@@ -214,6 +216,7 @@ You walk behind the desk to view the flickering computer screen.
 The computer is password protected. You click on the hint button.
 "If 3,5,2 = 16 and 1,7,5 = 40 then what is 9,2,3 = ?"
 You study the groups of numbers to think of how to calculate the password...
+SOLUTION 33
 PUZZLEEND
 PUZZLESTART
 SAFE
@@ -221,6 +224,7 @@ As you bend down, you notice a sticky note stuck on the front of the safe.
 the 1st digit plus the 2nd digit is equal to the 3rd digit
 the 2nd digit is two times the 1st digit, the 2nd digit is half the 4th digit
 You begin to think this sounds more complicated than it really is...
+SOLUTION 1234
 PUZZLEEND
 PUZZLESTART
 KEYPAD
@@ -228,6 +232,7 @@ As you approach the keypad, you remember the codes you collected from throughout
 The first number was 1. The second number was 0.
 The third number was 1. The forth number was 1.
 You carefully punch in the numbers in correct order...
+SOLUTION 1011
 PUZZLEEND
 ENDINGSTART
 WRONG
