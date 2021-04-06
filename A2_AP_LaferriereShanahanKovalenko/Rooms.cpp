@@ -2,19 +2,25 @@
 
 Rooms::Rooms()
 {
-    m_setUpRoom();
+  
 }
 
-Rooms::Rooms(string key, string name, string item, string puzzle, string death)
+Rooms::Rooms(string key, string name, string story1, string story2, string story3, string description, string item, string puzzle, string death)
 {
-    m_setUpRoom(key, name, item, puzzle, death);
+    m_setUpRoom(key, name, story1, story2, story3, description, item, puzzle, death);
 }
 
-void Rooms::m_setUpRoom(string key, string name, string item, string puzzle, string death)
+void Rooms::m_setUpRoom(string key, string name, string story1, string story2, string story3, string description, string item, string puzzle, string death)
 {
     m_roomKey = key;
     m_roomName = name;
-    //Will need item as well
+    m_storyLine1 = story1;
+    m_storyLine2 = story2;
+    m_storyLine3 = story3;
+    m_roomDescription = description;
+    m_roomItem = item;
+    m_roomPuzzle = puzzle;
+    m_dead = death;
 
     for (int i = 0; i < 3; i++)
     {
@@ -22,11 +28,11 @@ void Rooms::m_setUpRoom(string key, string name, string item, string puzzle, str
     }
 }
 
-void Rooms::m_setNeighbours(string right, string left, string back)
+void Rooms::m_setNeighbours(string back, string right, string left)
 {
+    m_neighbourKeys[BACK] = back;
     m_neighbourKeys[RIGHT] = right;
     m_neighbourKeys[LEFT] = left;
-    m_neighbourKeys[BACK] = back;
 }
 
 bool Rooms::m_canUsePath(ChoicePath direction)

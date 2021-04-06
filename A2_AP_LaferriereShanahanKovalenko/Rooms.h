@@ -26,18 +26,24 @@ string getChoicePath(ChoicePath direction)
 struct Rooms
 {
 	Rooms();
-	Rooms(string key, string name, string item, string puzzle, string death);
+	Rooms(string key, string name, string story1, string story2, string story3, string description, string item, string puzzle, string death);
 
 	void m_setNeighbours(string right, string left, string back);
-	void m_setUpRoom(string key = "", string name = "", string item = "", string puzzle = "", string death = "");
+	void m_setUpRoom(string key, string name, string story1, string story2, string story3, string description, string item, string puzzle, string death);
 
 	bool m_canUsePath(ChoicePath direction);
 	string m_getNeighbours(ChoicePath direction);
 	string m_getKey();
 	void m_displayRoom();
 
+	bool m_firstEnter,
+		m_dead;
 	string m_roomKey,
 		m_roomName,
+		m_storyLine1,
+		m_storyLine2,
+		m_storyLine3,
+		m_roomDescription,
 		m_roomItem,
 		m_roomPuzzle,
 		m_roomDeath,

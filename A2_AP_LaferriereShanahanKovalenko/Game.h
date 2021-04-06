@@ -18,8 +18,9 @@ public:
 	void m_RunGame();
 
 private:
-	void m_buildRooms(string key, string description, string left, string right, string back);
-	bool m_createRooms();
+	bool m_buildRooms();
+	void m_createRooms(string key, string name, string story1, string story2, string story3, 
+		string description, string back, string right, string left, string item, string puzzle, string death);
 	bool m_isCreated;
 	
 	string m_managePlayerInput(); 
