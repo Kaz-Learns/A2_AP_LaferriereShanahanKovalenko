@@ -5,18 +5,16 @@ Rooms::Rooms()
     m_setUpRoom();
 }
 
-Rooms::Rooms(string key, string name, string description)
+Rooms::Rooms(string key, string name, string item, string puzzle, string death)
 {
-    m_setUpRoom(key, name, description);
+    m_setUpRoom(key, name, item, puzzle, death);
 }
 
-void Rooms::m_setUpRoom(string key, string name, string description)
+void Rooms::m_setUpRoom(string key, string name, string item, string puzzle, string death)
 {
     m_roomKey = key;
     m_roomName = name;
-    m_roomDescripton = description;
     //Will need item as well
-
 
     for (int i = 0; i < 3; i++)
     {
@@ -56,5 +54,4 @@ string Rooms::m_getKey()
 void Rooms::m_displayRoom()
 {
     cout << m_roomName << endl;
-    cout << m_roomDescripton << endl;
 }
