@@ -1,1 +1,255 @@
-Test$This is reading in a string$You have made this choice.$
+ROOMSTART
+FOREST
+The Forest
+You wake up suddenly in a forest in the dead of night. 
+You have no recollection of who you are or how you got here. 
+It is raining heavly, and you are soaking wet.
+There is a ROAD up a small hill to your RIGHT, and an ABANDONED HOUSE behind some trees to your LEFT.
+BACK NULL
+RIGHT ROAD
+LEFT HOUSE
+ITEM NULL
+PUZZLE NULL
+DEATH NULL
+ROOMEND
+ROOMSTART
+ROAD
+The Road
+You climb up the small hill to reach the road.
+You slip on some wet leaves, causing you to stumble and fall onto the road.
+You scramble to get up, but you just aren't quick enough.
+You are hit by an 18 wheeler truck and killed instantly.
+BACK NULL
+RIGHT NULL
+LEFT NULL
+ITEM NULL
+PUZZLE NULL
+DEATH YES
+ROOMEND
+ROOMSTART
+HOUSE
+Abandoned House
+You walk through some trees to reach the house.
+It looks like it has been abandoned for a while, and is surrounded by a fence.
+You feel extremely uneasy approaching the creepy old house.
+You see a hole in the fence leading to the FRONT YARD on your RIGHT, and notice a CLEARING in the forest to your LEFT.
+BACK FOREST
+RIGHT YARD
+LEFT CLEARING
+ITEM NULL
+PUZZLE NULL
+DEATH NULL
+ROOMEND
+ROOMSTART
+YARD
+Front Yard of the Abandoned House
+The yard is full of tall grass. It needs a good mowing...
+As you walk through the grass, you begin to think this was a bad choice.
+You are nearing the front porch of the house when something snaps around your ankle. You scream out in pain.
+You look down to see you have stepped in a bear trap. Blood pools around you, as you slowly bleed out and die.
+BACK NULL
+RIGHT NULL
+LEFT NULL
+ITEM NULL
+PUZZLE NULL
+DEATH YES
+ROOMEND
+ROOMSTART
+CLEARING
+Clearing in the Forest
+This area has fewer trees, and a layer of fog covers the ground.
+You are shivering as the rainfall intensifies.
+It is now thunder and lightening. You need to find shelter.
+You hear growling coming from a BUSH on your LEFT, and a large BUILDING in the distance to your RIGHT
+BACK NULL
+RIGHT ASYLUM
+LEFT BUSH
+ITEM NULL
+PUZZLE NULL
+DEATH NULL
+ROOMEND
+ROOMSTART
+BUSH
+A Large Bush in the Forest
+You slowly approach the bush, afraid of what could be hiding within. You carefully pull back some leaves... 
+It reveals a dog. It makes eye contact and begins to growl louder.
+You reach out and carefully pet the dog. It calms down and begins to lick your hand. The dog seems to be innocent enough.
+You decide to take the dog with you to seek shelter from the rain. You look towards the BUILDING to the RIGHT.
+BACK NULL
+RIGHT ASYLUM
+LEFT NULL
+ITEM DOG
+PUZZLE NULL
+DEATH NULL
+ROOMEND
+ROOMSTART
+ASYLUM
+Insane Asylum
+As you approach the large dark creepy building, you realize it is an old insane asylum.
+You immediately feel uneasy, and your heart begins beating rapidly.
+You slowly walk up the steps to reach the front door.
+You notice WIRES hanging from the main entrance keypad.
+BACK NULL
+RIGHT NULL
+LEFT NULL
+ITEM NULL
+PUZZLE WIRES
+DEATH NULL
+ROOMEND
+ROOMSTART
+FOYER
+Asylum Foyer
+You push open the door and enter the main foyer of the Asylum.
+The door slams shut behind you with a strong gust of wind. 
+You try to push the door back open, but it won't budge. You are now locked inside.
+You look around and see a hallway on the MAIN FLOOR to your RIGHT and a STAIRCASE to your LEFT.
+BACK NULL
+RIGHT MAIN
+LEFT TOP
+ITEM NULL
+PUZZLE NULL
+DEATH NULL
+ROOMEND
+ROOMSTART
+MAIN
+Main Floor
+You slowly make your way down the hallway on the main floor.
+The floors creak beneath your feet with each step you take.
+You have an unsettling feeling that you are not the only one here.
+You see a KITCHEN to your RIGHT and a NURSE'S OFFICE on your LEFT.
+BACK NULL
+RIGHT KITCHEN
+LEFT NURSE
+ITEM NULL
+PUZZLE NULL
+DEATH NULL
+ROOMEND
+ROOMSTART
+KITCHEN
+Kitchen
+As you step into the kitchen, a rancid smell of rotting flesh hits you.
+You hear a faint sound coming from the back of the kitchen.
+Struggling to hold back bile, you make your way slowly towards the sound.
+You reach the source of the sound, and find out it is static coming from a WALKIE-TALKIE on the ground.
+BACK MAIN
+RIGHT NULL
+LEFT NULL
+ITEM CODE1
+PUZZLE WALKIE-TALKIE
+DEATH NULL
+ROOMEND
+ROOMSTART
+NURSE
+Nurse's Office
+You approach the door to the Nurse's Office.
+As you get to the door, you hear a faint rustle coming from inside the office.
+You try the handle, but the door is locked.
+You notice there is a numbered KEYPAD on the door.
+BACK MAIN
+RIGHT NULL
+LEFT NULL
+ITEM NULL
+PUZZLE KEYPAD
+DEATH NULL
+ROOMEND
+ROOMSTART
+TOP
+Top Floor
+You begin to make your way up the creaky old staircase.
+As you step down on the fifth stair, the tread breaks and your foot goes right through.
+You grab onto the railing and pull your foot out of the hole, continuing up the staircase.
+You reach the top floor and see an ADMIN'S OFFICE on your RIGHT, and a SECURITY OFFICE on your LEFT.
+BACK NULL
+RIGHT OFFICE
+LEFT SECURITY
+ITEM NULL
+PUZZLE NULL
+DEATH NULL
+ROOMEND
+ROOMSTART
+OFFICE
+Admin Office
+You approach the door to the Admin's Office and press down on the handle.
+The door opens and you enter the office.
+There are papers and files scattered everywhere.
+You notice an old COMPUTER on the desk with a flickering screen.
+BACK TOP
+RIGHT NULL
+LEFT NULL
+ITEM CODE2
+PUZZLE COMPUTER
+DEATH NULL
+ROOMEND
+ROOMSTART
+SECURITY
+Security Office
+You approach the door to the Security Office and notice it has been pryed open.
+After entering the office, you begin searching for a master keycard for the front door.
+You search from top to bottom, but have no luck in finding one.
+You catch a glimpse of a large SAFE in a dark corner.
+BACK TOP
+RIGHT NULL
+LEFT NULL
+ITEM CODE3
+PUZZLE SAFE
+DEATH NULL
+ROOMEND
+PUZZLESTART
+WIRES
+You approach the wires, and notice they have all been cut. There is a diagram on the inside of the keypad cover, showing 3 coloured wires.
+In the diagram the LEFT wire is PURPLE, the MIDDLE wire is GREEN and the RIGHT wire is ORANGE.
+You look at the wires in front of you on the top row: the left wire is red, the middle wire is blue and the right wire is yellow.
+The bottom row is the same as the top row. You decide to take the bottom row wires and connect them to the top row.
+PUZZLEEND
+PUZZLESTART
+WALKIE-TALKIE
+You pick up the walkie-talkie, press the button and say "Hello?".
+A creepy voice answers you, sending chills down your spine.
+"I don't have eyes, but once I did see. Once I had thoughts, but now I'm white and empty. I am a ..?"
+You think carefully before answering...
+PUZZLEEND
+PUZZLESTART
+COMPUTER
+You walk behind the desk to view the flickering computer screen.
+The computer is password protected. You click on the hint button.
+"If 3,5,2 = 16 and 1,7,5 = 40 then what is 9,2,3 = ?"
+You study the groups of numbers to think of how to calculate the password...
+PUZZLEEND
+PUZZLESTART
+SAFE
+As you bend down, you notice a sticky note stuck on the front of the safe.
+the 1st digit plus the 2nd digit is equal to the 3rd digit
+the 2nd digit is two times the 1st digit, the 2nd digit is half the 4th digit
+You begin to think this sounds more complicated than it really is...
+PUZZLEEND
+PUZZLESTART
+KEYPAD
+As you approach the keypad, you remember the codes you collected from throughout the asylum...
+The first number was 1. The second number was 0.
+The third number was 1. The forth number was 1.
+You carefully punch in the numbers in correct order...
+PUZZLEEND
+ENDINGSTART
+WRONG
+You slowly open the door and walk into the office. 
+You begin looking through the desk for a master key to escape, when you hear the floor creak behind you.
+Before you can turn around, someone - or something - grabs you.
+The dog immediately pounces and attacks the mysterious figure, releasing you from the tight grip.
+You turn around to see the figure laying on the ground in a pool of blood.
+You notice a master key lying in the blood, so you slowly reach down and grab it.
+You make your way down the hallway to the main entrance, and unlock the door.
+Stepping outside, the rain has stopped and the sun is now rising. 
+As you walk away from the asylum, you have an uneasy feeling everything was not how it seemed...
+ENDINGEND
+ENDINGSTART
+RIGHT
+You slowly open the door and walk into the office. 
+You begin looking through the desk for a master key to escape, when you hear the floor creak behind you.
+Before you can turn around, someone - or something - grabs you.
+You feel a sharp pain in the side of your neck as you are injected with something.
+You wake up in a white padded room.
+You try to reach up to rub your neck, but can't lift your arms.
+You are in a straight jacket.
+You live here.
+You are insane.
+ENDINGEND
