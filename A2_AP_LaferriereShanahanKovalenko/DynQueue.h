@@ -1,12 +1,12 @@
 #pragma once
 #include "Rooms.h"
 
-class DynIntQueue
+class DynRoomQueue
 {
 private:
 	class QueueNode
 	{
-		friend class DynIntQueue;
+		friend class DynRoomQueue;
 		Rooms* value;
 		QueueNode* next;
 
@@ -22,17 +22,17 @@ private:
 	QueueNode* rear;
 
 public:
-	DynIntQueue()
+	DynRoomQueue()
 	{
 		front = nullptr;
 		rear = nullptr;
 	}
-	~DynIntQueue()
+	~DynRoomQueue()
 	{
 		clear();
 	}
 
-	void enqueue(Rooms);
+	void enqueue(Rooms*);
 	void dequeue(Rooms&);
 	bool isEmpty() const;
 	void clear();
