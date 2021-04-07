@@ -2,6 +2,7 @@
 #ifndef __PUZZLE_H__
 #define __PUZZLE_H__
 #include <string>
+#include <iostream>
 using namespace std;
 
 struct Puzzle
@@ -12,6 +13,7 @@ struct Puzzle
 
 	void m_setUpPuzzle(string key, string info1, string info2, string info3, string info4, string solution);
 	string getSolution();
+	void m_displayPuzzle();
 
 	string m_puzzleKey,
 		m_puzzleInfo1,

@@ -65,7 +65,11 @@ string Rooms::m_getKey()
 
 void Rooms::m_displayRoom()
 {
-    cout << m_roomName << endl;
+    cout << "-----------------\n" << m_roomName << endl << "-----------------\n";
+    cout << m_storyLine1 << endl;
+    cout << m_storyLine2 << endl;
+    cout << m_storyLine3 << endl;
+    cout << m_roomDescription << endl;
 }
 
 

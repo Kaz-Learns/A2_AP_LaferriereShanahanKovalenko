@@ -141,8 +141,8 @@
   <ItemGroup>
     <ClInclude Include="DynQueue.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="Map.h" />
     <ClInclude Include="Inventory.h" />
+    <ClInclude Include="List.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="Puzzle.h" />
     <ClInclude Include="Rooms.h" />

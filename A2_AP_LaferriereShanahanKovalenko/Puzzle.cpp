@@ -29,3 +29,11 @@ string Puzzle::getSolution()
 {
 	return m_solution;
 }
+
+void Puzzle::m_displayPuzzle()
+{
+	cout << endl << m_puzzleInfo1 << endl;
+	cout << m_puzzleInfo2 << endl;
+	cout << m_puzzleInfo3 << endl;
+	cout << m_puzzleInfo4 << endl;
+}
