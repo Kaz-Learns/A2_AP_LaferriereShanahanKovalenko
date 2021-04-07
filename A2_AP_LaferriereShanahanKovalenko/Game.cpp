@@ -104,7 +104,73 @@ void Game::m_createPuzzle(string key, string info1, string info2, string info3, 
 	m_puzzles[key] = new Puzzle(key, info1, info2, info3, info4, solution);
 }
 
-string Game::m_managePlayerInput()
+void Game::m_managePlayerInput(string input1, string input2)
 {
+	if (input1 == "GO")
+	{
+		if(input2 == "RIGHT")
+		{
+			if (m_pCurrentRoom->m_canUsePath(RIGHT))
+			{
+				// Move to that room
+			}
+		}
+		if (input2 == "LEFT")
+		{
+			if (m_pCurrentRoom->m_canUsePath(LEFT))
+			{
+				// Move to that room
+			}
+		}
+		if (input2 == "BACK")
+		{
+			if (m_pCurrentRoom->m_canUsePath(BACK))
+			{
+				// Move to that room
+			}
+		}
+	}
+	if (input1 == "INTERACT")
+	{
+		if (input2 == "WIRES")
+		{
+			if (m_pCurrentRoom->m_getKey() == "ASYLUM")
+			{
+				// Use the puzzle
+			}
+		}
+		if (input2 == "RADIO")
+		{
+			if (m_pCurrentRoom->m_getKey() == "KITCHEN")
+			{
+				// Use the puzzle
+			}
+		}
+		if (input2 == "COMPUTER")
+		{
+			if (m_pCurrentRoom->m_getKey() == "OFFICE")
+			{
+				// Use the puzzle
+			}
+		}
+		if (input2 == "SAFE")
+		{
+			if (m_pCurrentRoom->m_getKey() == "SECURITY")
+			{
+				// Use the puzzle
+			}
+		}
+		if (input2 == "KEYPAD")
+		{
+			if (m_pCurrentRoom->m_getKey() == "NURSE")
+			{
+				/*if (Player has all the code)
+				{
+					Use the puzzle
+				}*/
+			}
+		}
+	}
+
     return string();
 }

@@ -23,7 +23,7 @@ private:
 	void m_createRooms(string key, string name, string story1, string story2, string story3, 
 		string description, string back, string right, string left, string item, string puzzle, string death);
 	void m_createPuzzle(string key, string info1, string info2, string info3, string info4, string solution);
-	string m_managePlayerInput(); 
+	void m_managePlayerInput(string input1, string input2); 
 
 	map<string, Rooms*> m_rooms; // To store all existing rooms
 	Rooms* m_pCurrentRoom; // To track current room

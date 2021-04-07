@@ -130,12 +130,12 @@ Kitchen
 As you step into the kitchen, a rancid smell of rotting flesh hits you.
 You hear a faint sound coming from the back of the kitchen.
 Struggling to hold back bile, you make your way slowly towards the sound.
-You reach the source of the sound, and find out it is static coming from a WALKIE-TALKIE on the ground.
+You reach the source of the sound, and find out it is static coming from a two-way RADIO on the ground.
 BACK MAIN
 RIGHT NULL
 LEFT NULL
 ITEM CODE1
-PUZZLE WALKIE-TALKIE
+PUZZLE RADIO
 DEATH NULL
 ROOMEND
 ROOMSTART
@@ -203,8 +203,8 @@ You see 3 coloured wires hanging down that are red, blue and yellow. You think c
 SOLUTION RED
 PUZZLEEND
 PUZZLESTART
-WALKIE-TALKIE
-You pick up the walkie-talkie, press the button and say "Hello?".
+RADIO
+You pick up the radio, press the button and say "Hello?".
 A creepy voice answers you, sending chills down your spine.
 "I don't have eyes, but once I did see. Once I had thoughts, but now I'm white and empty. I am a ..?"
 You think carefully before answering...
