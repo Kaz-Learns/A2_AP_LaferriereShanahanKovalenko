@@ -32,9 +32,8 @@ public:
 	}
 	~List();
 	void add(T value);
-	T getObject();
 	T search(T value);
-	bool find(string value);
+	bool find(T key);
 	void remove(T value);
 };
 
@@ -67,12 +66,6 @@ void List<T>::add(T value)
 		//Create new node and put it after the last node
 		nodePtr->next = new ListNode(value);
 	}
-}
-
-template<class T>
-T List<T>::getObject()
-{
-	return value;
 }
 
 //Removes an element from a list, function does not assume that list is sorted (when using nums)
@@ -115,7 +108,7 @@ void List<T>::remove(T value)
 template <class T>
 T List<T>::search(T key)
 {
-	ListNode* nodePtr;
+	ListNode* nodePtr, startPtr;
 	bool found = false;
 
 	nodePtr = startPtr;
@@ -131,9 +124,9 @@ T List<T>::search(T key)
 }
 
 template<class T>
-bool List<T>::find(string item)
+bool List<T>::find(T key)
 {
-	ListNode* nodePtr;
+	ListNode* nodePtr, startPtr;
 	bool found = false;
 
 	nodePtr = startPtr;

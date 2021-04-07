@@ -32,7 +32,7 @@ private:
 	string m_lastRoom; // To track last visited room
 
 	map<string, Puzzle*> m_puzzles; // To story all the puzzles
-	Puzzle* m_pCurrentPuzzle; // To track current puzzle
+	//Puzzle* m_pCurrentPuzzle; // To track current puzzle
 
 	List<Rooms*> m_gameRooms;
 	Rooms* m_pCurrentRoom; // To track current room
