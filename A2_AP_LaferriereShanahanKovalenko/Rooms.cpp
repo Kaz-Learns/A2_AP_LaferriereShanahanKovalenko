@@ -8,6 +8,12 @@ Rooms::Rooms()
 Rooms::Rooms(string key, string name, string story1, string story2, string story3, string description, string item, string puzzle, string death)
 {
     m_setUpRoom(key, name, story1, story2, story3, description, item, puzzle, death);
+ 
+}
+
+Rooms::~Rooms()
+{
+    
 }
 
 void Rooms::m_setUpRoom(string key, string name, string story1, string story2, string story3, string description, string item, string puzzle, string death)
@@ -61,3 +67,7 @@ void Rooms::m_displayRoom()
 {
     cout << m_roomName << endl;
 }
+
+
+
+
