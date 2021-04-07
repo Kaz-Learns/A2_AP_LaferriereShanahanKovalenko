@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DynQueue.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Inventory.h" />
@@ -147,6 +148,7 @@
     <ClInclude Include="Rooms.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DynQueue.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Main.cpp" />
