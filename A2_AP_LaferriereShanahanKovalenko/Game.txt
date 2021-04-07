@@ -199,7 +199,7 @@ WIRES
 You approach the wires, and notice they are all intact but one. You inspect the wires and their colours.
 The top row: the left wire is red, the middle wire is blue and the right wire is yellow.
 The bottom row: the left wire is blue, the middle wire is yellow and the right wire is missing.
-You see a 3 coloured wires hanging down that are red, blue and yellow. You think carefully before choosing one to connect to the yellow wire...
+You see 3 coloured wires hanging down that are red, blue and yellow. You think carefully before choosing one to connect to the yellow wire...
 SOLUTION RED
 PUZZLEEND
 PUZZLESTART

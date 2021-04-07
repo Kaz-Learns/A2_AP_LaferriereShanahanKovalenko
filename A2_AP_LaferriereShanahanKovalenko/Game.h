@@ -5,9 +5,10 @@
 #include <fstream>
 #include <string>
 #include <map>
-using namespace std;
-
 #include "Rooms.h"
+#include "Puzzle.h"
+#include "Inventory.h"
+using namespace std;
 
 class Game
 {
@@ -21,14 +22,17 @@ private:
 	bool m_buildRooms();
 	void m_createRooms(string key, string name, string story1, string story2, string story3, 
 		string description, string back, string right, string left, string item, string puzzle, string death);
-	bool m_isCreated;
-	
+	void m_createPuzzle(string key, string info1, string info2, string info3, string info4, string solution);
 	string m_managePlayerInput(); 
 
-	map<string, Rooms*> m_rooms; //to store all existing rooms
-	Rooms* m_pCurrentRoom; // to track current room
-	string m_lastRoom; // to track last visited room
+	map<string, Rooms*> m_rooms; // To store all existing rooms
+	Rooms* m_pCurrentRoom; // To track current room
+	string m_lastRoom; // To track last visited room
 
+	map<string, Puzzle*> m_puzzles; // To story all the puzzles
+	Puzzle* m_pCurrentPuzzle; // To track current puzzle
+
+	bool m_isCreated;
 };
 
 
