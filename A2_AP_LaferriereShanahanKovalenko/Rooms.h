@@ -3,9 +3,10 @@
 #define __ROOMS_H__
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
-enum ChoicePath { LEFT, RIGHT, BACK };
+enum ChoicePath  { LEFT, RIGHT, BACK };
 
 string getChoicePath(ChoicePath direction)
 {
@@ -23,10 +24,13 @@ string getChoicePath(ChoicePath direction)
 	}
 }
 
-struct Rooms
+class Rooms
 {
+public:
+
 	Rooms();
 	Rooms(string key, string name, string story1, string story2, string story3, string description, string item, string puzzle, string death);
+	~Rooms();
 
 	void m_setNeighbours(string right, string left, string back);
 	void m_setUpRoom(string key, string name, string story1, string story2, string story3, string description, string item, string puzzle, string death);
@@ -35,6 +39,9 @@ struct Rooms
 	string m_getNeighbours(ChoicePath direction);
 	string m_getKey();
 	void m_displayRoom();
+
+
+private:
 
 	string m_roomKey,
 		m_roomName,
