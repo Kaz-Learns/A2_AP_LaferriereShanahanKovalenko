@@ -7,7 +7,7 @@ using namespace std;
 template <class T>
 class List
 {
-protected:
+public:
 	struct ListNode
 	{
 		T value;
@@ -35,6 +35,8 @@ public:
 	T search(T value);
 	bool find(T key);
 	void remove(T value);
+
+	ListNode* nodePtr, startPtr, nodePtr;
 };
 
 template<class T>
@@ -108,7 +110,7 @@ void List<T>::remove(T value)
 template <class T>
 T List<T>::search(T key)
 {
-	ListNode* nodePtr, startPtr;
+	
 	bool found = false;
 
 	nodePtr = startPtr;
@@ -126,7 +128,6 @@ T List<T>::search(T key)
 template<class T>
 bool List<T>::find(T key)
 {
-	ListNode* nodePtr, startPtr;
 	bool found = false;
 
 	nodePtr = startPtr;

@@ -21,6 +21,9 @@ private:
 	QueueNode* front;
 	QueueNode* rear;
 
+	Rooms* aPtr;
+	int roomsSize;
+
 public:
 	DynRoomQueue()
 	{
@@ -36,5 +39,7 @@ public:
 	void dequeue(Rooms&);
 	bool isEmpty() const;
 	void clear();
+
+	void operator=(const Rooms &right);
 
 };

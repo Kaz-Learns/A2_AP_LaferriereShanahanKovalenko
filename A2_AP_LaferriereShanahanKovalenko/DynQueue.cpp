@@ -52,3 +52,14 @@ void DynRoomQueue::clear()
 		dequeue(value);
 	}
 }
+
+void DynRoomQueue::operator=(const Rooms& right)
+{
+	//if (roomsSize > 0)
+	//{
+	//	delete [] aPtr;
+	//}
+
+	//roomsSize = right.roomsSize;
+	//aPtr = new Rooms[roomsSize]
+}
