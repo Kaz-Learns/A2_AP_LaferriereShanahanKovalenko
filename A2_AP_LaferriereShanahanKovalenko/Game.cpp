@@ -109,83 +109,83 @@ void Game::m_managePlayerInput(string input1, string input2)
 	{
 		
 	}
+
 	if (input1 == "INTERACT")
 	{
 		if (input2 == "WIRES")
 		{
-			if (m_pCurrentRoom->m_getKey() == "ASYLUM")
-			{
-				//m_pCurrentPuzzle = m_gamePuzzles.search(m_puzzles[input2]);
-				m_pCurrentPuzzle->m_displayPuzzle();
+			//m_pCurrentPuzzle = m_gamePuzzles.search(m_puzzles[input2]);
+			m_pCurrentPuzzle->m_displayPuzzle();
 
-				while (answer != m_pCurrentPuzzle->getSolution())
-				{
-					cin >> answer;
-				}
-				m_inventory.add("FIRST DIGIT: 1");
+			while (answer != m_pCurrentPuzzle->getSolution())
+			{
+				cin >> answer;
+			}
+			m_inventory.add("FIRST DIGIT: 1");
 			}
 		}
 		if (input2 == "RADIO")
 		{
-			if (m_pCurrentRoom->m_getKey() == "KITCHEN")
-			{
-				m_pCurrentPuzzle = m_gamePuzzles.search(m_puzzles[input2]);
-				m_pCurrentPuzzle->m_displayPuzzle();
+			//m_pCurrentPuzzle = m_gamePuzzles.search(m_puzzles[input2]);
+			m_pCurrentPuzzle->m_displayPuzzle();
 
-				while (answer != m_pCurrentPuzzle->getSolution())
-				{
-					cin >> answer;
-				}
-				m_inventory.add("SECOND DIGIT: 0");
+			while (answer != m_pCurrentPuzzle->getSolution())
+			{
+				cin >> answer;
 			}
+			m_inventory.add("SECOND DIGIT: 0");
+			
 		}
 		if (input2 == "COMPUTER")
 		{
-			if (m_pCurrentRoom->m_getKey() == "OFFICE")
-			{
-				m_pCurrentPuzzle = m_gamePuzzles.search(m_puzzles[input2]);
-				m_pCurrentPuzzle->m_displayPuzzle();
+			//m_pCurrentPuzzle = m_gamePuzzles.search(m_puzzles[input2]);
+			m_pCurrentPuzzle->m_displayPuzzle();
 
-				while (answer != m_pCurrentPuzzle->getSolution())
-				{
-					cin >> answer;
-				}
-				m_inventory.add("THIRD DIGIT: 1");
+			while (answer != m_pCurrentPuzzle->getSolution())
+			{
+				cin >> answer;
 			}
+			m_inventory.add("THIRD DIGIT: 1");
+			
 		}
 		if (input2 == "SAFE")
 		{
-			if (m_pCurrentRoom->m_getKey() == "SECURITY")
-			{
-				m_pCurrentPuzzle = m_gamePuzzles.search(m_puzzles[input2]);
-				m_pCurrentPuzzle->m_displayPuzzle();
+			//m_pCurrentPuzzle = m_gamePuzzles.search(m_puzzles[input2]);
+			m_pCurrentPuzzle->m_displayPuzzle();
 
-				while (answer != m_pCurrentPuzzle->getSolution())
-				{
-					cin >> answer;
-				}
-				m_inventory.add("FOURTH DIGIT: 1");
+			while (answer != m_pCurrentPuzzle->getSolution())
+			{
+				cin >> answer;
 			}
+			m_inventory.add("FOURTH DIGIT: 1");
+			
 		}
 		if (input2 == "KEYPAD")
 		{
-			if (m_pCurrentRoom->m_getKey() == "NURSE")
+			if (m_hasDog == true)
 			{
-				if ((m_inventory.find("FIRST DIGIT: 1") == true) && (m_inventory.find("SECOND DIGIT: 0") == true)
-					&& (m_inventory.find("THIRD DIGIT: 1") == true) && (m_inventory.find("FOURTH DIGIT: 1") == true))
-				{
-					if (m_inventory.find("Dog") == true)
-					{
-						m_displayGameEnding(2);
-					}
-					else
-					{
-						m_displayGameEnding(1);
-					}
-				}
+				m_displayGameEnding(2);
 			}
+			else
+			{
+				m_displayGameEnding(1);
+			}
+
+			/*if ((m_inventory.find("FIRST DIGIT: 1") == true) && (m_inventory.find("SECOND DIGIT: 0") == true)
+				&& (m_inventory.find("THIRD DIGIT: 1") == true) && (m_inventory.find("FOURTH DIGIT: 1") == true))
+			{
+				if (m_hasDog == true)
+				{
+					m_displayGameEnding(2);
+				}
+				else
+				{
+					m_displayGameEnding(1);
+				}
+			}*/
+			
 		}
-	}
+	
 }
 
 void Game::m_displayGameEnding(int ending)

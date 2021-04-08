@@ -30,9 +30,7 @@ public:
 	}
 	~List();
 	void add(T value);
-	T search(T value);
-	bool find(T key);
-	void remove(T value);
+	//void remove(T value);
 
 };
 
@@ -68,77 +66,41 @@ void List<T>::add(T value)
 	}
 }
 
-//Removes an element from a list, function does not assume that list is sorted (when using nums)
-template<class T>
-void List<T>::remove(T value)
-{
-	ListNode* nodePtr, *previousNodePtr;
-
-	//If list is empty, do nothing
-	if (!m_front) return;
-
-	//Determine if first node is the one to delete
-	if (m_front->value == value)
-	{
-		nodePtr = m_front;
-		m_front = m_front->next;
-		delete nodePtr;
-	}
-	else
-	{
-		//Init nodePtr to the head of the list
-		nodePtr = m_front;
-
-		//Skip nodes whose value is not the one we're looking for
-		while (nodePtr != nullptr && nodePtr->value != value)
-		{
-			previousNodePtr = nodePtr;
-			nodePtr = nodePtr->next;
-		}
-
-		//Link previous node to the node after nodePtr, then delete nodePtr
-		if (nodePtr)
-		{
-			previousNodePtr->next = nodePtr->next;
-			delete nodePtr;
-		}
-	}
-}
-
-template <class T>
-T List<T>::search(T key)
-{
-	ListNode* nodePtr, startPtr;
-	bool found = false;
-
-	nodePtr = startPtr;
-
-	while (!found && nodePtr != NULL)
-	{
-		if (nodePtr->data == key)
-			found = true;
-		else
-			nodePtr = nodePtr->nextPtr;
-	}
-	return nodePtr;
-}
-
-template<class T>
-bool List<T>::find(T key)
-{
-	ListNode* nodePtr, startPtr, nodePtr;
-	bool found = false;
-
-	nodePtr = startPtr;
-
-	while (!found && nodePtr != NULL)
-	{
-		if (nodePtr->data == key)
-			found = true;
-		else
-			nodePtr = nodePtr->nextPtr;
-	}
-	return found;
-}
+////Removes an element from a list, function does not assume that list is sorted (when using nums)
+//template<class T>
+//void List<T>::remove(T value)
+//{
+//	ListNode* nodePtr, *previousNodePtr;
+//
+//	//If list is empty, do nothing
+//	if (!m_front) return;
+//
+//	//Determine if first node is the one to delete
+//	if (m_front->value == value)
+//	{
+//		nodePtr = m_front;
+//		m_front = m_front->next;
+//		delete nodePtr;
+//	}
+//	else
+//	{
+//		//Init nodePtr to the head of the list
+//		nodePtr = m_front;
+//
+//		//Skip nodes whose value is not the one we're looking for
+//		while (nodePtr != nullptr && nodePtr->value != value)
+//		{
+//			previousNodePtr = nodePtr;
+//			nodePtr = nodePtr->next;
+//		}
+//
+//		//Link previous node to the node after nodePtr, then delete nodePtr
+//		if (nodePtr)
+//		{
+//			previousNodePtr->next = nodePtr->next;
+//			delete nodePtr;
+//		}
+//	}
+//}
 
 #endif // !__LIST_H__
