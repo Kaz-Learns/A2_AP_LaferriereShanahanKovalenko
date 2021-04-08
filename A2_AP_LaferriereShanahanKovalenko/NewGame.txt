@@ -29,7 +29,8 @@ INTERACT WIRES
 ROOMEND
 
 ROOMSTART
-WIRES
+INSANE ASYLUM - WIRES
+---------------------
 You approach the wires, and notice they are all intact but one. You inspect the wires and their colours.
 The top row: the left wire is red, the middle wire is blue and the right wire is yellow.
 The bottom row: the left wire is blue, the middle wire is yellow and the right wire is missing.
@@ -68,7 +69,8 @@ INTERACT RADIO
 ROOMEND
 
 ROOMSTART
-RADIO
+KITCHEN - RADIO
+---------------
 You pick up the radio, press the button and say "Hello?".
 A creepy voice answers you, sending chills down your spine.
 "I don't have eyes, but once I did see. Once I had thoughts, but now I'm white and empty. What am I?"
@@ -97,7 +99,8 @@ INTERACT COMPUTER
 ROOMEND
 
 ROOM START
-COMPUTER
+ADMIN OFFICE - COMPUTER
+-----------------------
 You walk behind the desk to view the flickering computer screen.
 The computer is password protected. You click on the hint button.
 "If 3,5,2 = 16 and 1,7,5 = 40 then what is 9,2,3 = ?"
@@ -126,7 +129,8 @@ INTERACT SAFE
 ROOMEND
 
 ROOMSTART
-SAFE
+SECURITY OFFICE - SAFE
+----------------------
 As you bend down, you notice a sticky note stuck on the front of the safe.
 the 1st digit plus the 2nd digit is equal to the 3rd digit
 the 2nd digit is two times the 1st digit, the 2nd digit is half the 4th digit
@@ -155,7 +159,8 @@ INTERACT KEYPAD
 ROOMEND
 
 ROOMSTART
-KEYPAD
+NURSE'S OFFICE - KEYPAD
+-----------------------
 As you approach the keypad, you remember the codes you collected from throughout the asylum...
 The first number was 1. The second number was 0.
 The third number was 1. The forth number was 1.
