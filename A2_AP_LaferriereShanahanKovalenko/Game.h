@@ -21,9 +21,7 @@ public:
 
 private:
 	bool m_buildGame();
-	void m_createRooms(string name, string story1, string story2, string story3, string story4,
-		string description, string item, string puzzle, string death);
-	void m_createPuzzle(string info1, string info2, string info3, string info4, string solution);
+	void m_createRooms(string name, string underline, string story1, string story2, string story3, string story4, string inputRequired);
 	void m_managePlayerInput(string input1, string input2);
 	void m_displayGameEnding(int ending);
 	
