@@ -21,6 +21,9 @@ void Game::m_RunGame()
 	m_pCurrentRoom = m_gameRooms.front();
     m_pCurrentRoom->m_displayRoom();
 
+	m_getPlayerInput();
+	m_managePlayerInput(m_playerInput);
+
 	// Need to set up proper user command getline
 	/*getline(cin, m_command);
 	m_managePlayerInput(m_command);*/
@@ -61,6 +64,7 @@ bool Game::m_buildGame()
 
 			// Creates a room with the information from the text file
 			m_createRooms(name, underline, story1, story2, story3, story4, inputRequired);
+			
 		}
 	}
 	//Close the file
@@ -74,13 +78,25 @@ void Game::m_createRooms(string name, string underline, string story1, string st
 	m_gameRooms.push_back(new Rooms(name, underline, story1, story2, story3, story4, inputRequired));
 }
 
-void Game::m_managePlayerInput(string input1)
+string Game::m_getPlayerInput()
+{
+	getline(cin, m_playerInput);
+	return m_playerInput;
+}
+
+
+void Game::m_managePlayerInput(string input)
 {
 	string answer;
 	
 	if (answer == m_pCurrentRoom->m_getRequiredInput())
 	{
-		m_gameRooms.remove(m_pCurrentRoom);
+		m_pCurrentRoom = m_pNextRoom;
+		//m_gameRooms.remove(m_pCurrentRoom);
+		m_pNextRoom = m_gameRooms.front();
+		m_pNextRoom = m_pCurrentRoom;
+		m_getPlayerInput();
+		m_managePlayerInput(m_playerInput);
 	}
 }
 
