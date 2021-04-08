@@ -8,26 +8,24 @@ template <class T>
 class List
 {
 public:
-	struct ListNode
+	class ListNode
 	{
+		friend class List;
 		T value;
 		ListNode* next;
-		ListNode* previous;
-		ListNode(T value1, ListNode* next1 = nullptr, ListNode* previous1 = nullptr)
+		ListNode(T value1, ListNode* next1 = nullptr)
 		{
 			value = value1;
 			next = next1;
-			previous = previous1;
 		}
 	};
 	ListNode* m_front;
-	ListNode* m_back;
+
 
 public:
 	List()
 	{
 		m_front = nullptr;
-		m_back = nullptr;
 
 	}
 	~List();
@@ -36,7 +34,6 @@ public:
 	bool find(T key);
 	void remove(T value);
 
-	ListNode* nodePtr, startPtr, nodePtr;
 };
 
 template<class T>
@@ -55,6 +52,7 @@ List<T>::~List()
 template<class T>
 void List<T>::add(T value)
 {
+
 	if (m_front == nullptr)
 		m_front = new ListNode(value);
 	else
@@ -74,7 +72,7 @@ void List<T>::add(T value)
 template<class T>
 void List<T>::remove(T value)
 {
-	ListNode* nodePtr, * previousNodePtr;
+	ListNode* nodePtr, *previousNodePtr;
 
 	//If list is empty, do nothing
 	if (!m_front) return;
@@ -110,7 +108,7 @@ void List<T>::remove(T value)
 template <class T>
 T List<T>::search(T key)
 {
-	
+	ListNode* nodePtr, startPtr;
 	bool found = false;
 
 	nodePtr = startPtr;
@@ -128,6 +126,7 @@ T List<T>::search(T key)
 template<class T>
 bool List<T>::find(T key)
 {
+	ListNode* nodePtr, startPtr, nodePtr;
 	bool found = false;
 
 	nodePtr = startPtr;

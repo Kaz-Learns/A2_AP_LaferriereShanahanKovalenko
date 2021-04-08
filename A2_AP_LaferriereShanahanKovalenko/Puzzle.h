@@ -8,14 +8,14 @@ using namespace std;
 struct Puzzle
 {
 	Puzzle();
-	Puzzle(string key, string info1, string info2, string info3, string info4, string solution);
+	Puzzle(string info1, string info2, string info3, string info4, string solution);
 	~Puzzle();
 
-	void m_setUpPuzzle(string key, string info1, string info2, string info3, string info4, string solution);
+	void m_setUpPuzzle(string info1, string info2, string info3, string info4, string solution);
 	string getSolution();
 	void m_displayPuzzle();
 
-	string m_puzzleKey,
+	string 
 		m_puzzleInfo1,
 		m_puzzleInfo2,
 		m_puzzleInfo3,

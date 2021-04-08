@@ -21,10 +21,6 @@ void Game::m_RunGame()
     while (!m_isCreated)
     {
         m_pCurrentRoom->m_displayRoom();
-		if (m_pCurrentRoom == m_rooms["BUSH"])
-		{
-			m_inventory.add("Dog");
-		}
     }
 }
 
@@ -42,25 +38,20 @@ bool Game::m_buildGame()
 	}
 
 	// Local variables used to store info from the text file that will be used to create room objects & puzzles
-	string key, name, story1, story2, story3, story4, description, back, right, left, item, puzzle, death;
+	string name, story1, story2, story3, story4, description, item, puzzle, death;
 	
 	while (dataFile >> word)
 	{
 		if (word == "ROOMSTART")
 		{
-			dataFile >> key;
-			dataFile.ignore();
 			getline(dataFile, name);
 			getline(dataFile, story1);
 			getline(dataFile, story2);
 			getline(dataFile, story3);
 			getline(dataFile, description);
 			dataFile >> word;
-			dataFile >> back;
 			dataFile >> word;
-			dataFile >> right;
 			dataFile >> word;
-			dataFile >> left;
 			dataFile >> word;
 			dataFile >> item;
 			dataFile >> word;
@@ -69,13 +60,11 @@ bool Game::m_buildGame()
 			dataFile >> death;
 
 			// Creates a room with the information from the text file
-			m_createRooms(key, name, story1, story2, story3, description, back, right, left, item, puzzle, death);
+			m_createRooms(name, story1, story2, story3, story4, description, item, puzzle, death);
 		}
 
 		if (word == "PUZZLESTART")
 		{
-			dataFile >> key;
-			dataFile.ignore();
 			getline(dataFile, story1);
 			getline(dataFile, story2);
 			getline(dataFile, story3);
@@ -84,7 +73,7 @@ bool Game::m_buildGame()
 			dataFile >> puzzle;
 
 			// Creates a puzzle with the information from the text file
-			m_createPuzzle(key, story1, story2, story3, story4, puzzle);
+			m_createPuzzle(story1, story2, story3, story4, puzzle);
 		}
 
 		// Cout the ending based on whether the player has the dog or not - this will be read from the file during the run function of the game
@@ -96,21 +85,20 @@ bool Game::m_buildGame()
 	return true;
 }
 
-void Game::m_createRooms(string key, string name, string story1, string story2, string story3, 
-	string description, string back, string right, string left, string item, string puzzle, string death)
+void Game::m_createRooms(string name, string story1, string story2, string story3, string story4,
+	string description, string item, string puzzle, string death)
 {
-	//m_gameRooms.add(new Rooms(key, name, story1, story2, story3, description, item, puzzle, death));
+	m_gameRooms.add(new Rooms(name, story1, story2, story3, description, item, puzzle, death));
 	//m_gameRooms.getObject()->m_setNeighbours(right, left, back);
-	m_rooms[key] = new Rooms(key, name, story1, story2, story3, description, item, puzzle, death);
-	m_rooms[key]->m_setNeighbours(back, right, left);
-	m_gameRooms.add(m_rooms[key]);
+	//m_rooms[key] = new Rooms(key, name, story1, story2, story3, description, item, puzzle, death);
+	//m_gameRooms.add(m_rooms[key]);
 }
 
-void Game::m_createPuzzle(string key, string info1, string info2, string info3, string info4, string solution)
+void Game::m_createPuzzle(string info1, string info2, string info3, string info4, string solution)
 {
-	/*m_gamePuzzles.add(new Puzzle(key, info1, info2, info3, info4, solution));*/
-	m_puzzles[key] = new Puzzle(key, info1, info2, info3, info4, solution);
-	m_gamePuzzles.add(m_puzzles[key]);
+	m_gamePuzzles.add(new Puzzle(info1, info2, info3, info4, solution));
+	//m_gamePuzzles = new Puzzle(info1, info2, info3, info4, solution);
+	//m_gamePuzzles.add(m_gamePuzzles);
 }
 
 void Game::m_managePlayerInput(string input1, string input2)
@@ -119,27 +107,7 @@ void Game::m_managePlayerInput(string input1, string input2)
 
 	if (input1 == "GO")
 	{
-		if(input2 == "RIGHT")
-		{
-			if (m_pCurrentRoom->m_canUsePath(RIGHT))
-			{
-				m_pCurrentRoom = m_gameRooms.search(m_rooms[m_pCurrentRoom->m_getNeighbours(RIGHT)]);
-			}
-		}
-		if (input2 == "LEFT")
-		{
-			if (m_pCurrentRoom->m_canUsePath(LEFT))
-			{
-				m_pCurrentRoom = m_gameRooms.search(m_rooms[m_pCurrentRoom->m_getNeighbours(LEFT)]);
-			}
-		}
-		if (input2 == "BACK")
-		{
-			if (m_pCurrentRoom->m_canUsePath(BACK))
-			{
-				m_pCurrentRoom = m_gameRooms.search(m_rooms[m_pCurrentRoom->m_getNeighbours(BACK)]);
-			}
-		}
+		
 	}
 	if (input1 == "INTERACT")
 	{
@@ -147,7 +115,7 @@ void Game::m_managePlayerInput(string input1, string input2)
 		{
 			if (m_pCurrentRoom->m_getKey() == "ASYLUM")
 			{
-				m_pCurrentPuzzle = m_gamePuzzles.search(m_puzzles[input2]);
+				//m_pCurrentPuzzle = m_gamePuzzles.search(m_puzzles[input2]);
 				m_pCurrentPuzzle->m_displayPuzzle();
 
 				while (answer != m_pCurrentPuzzle->getSolution())
@@ -155,7 +123,6 @@ void Game::m_managePlayerInput(string input1, string input2)
 					cin >> answer;
 				}
 				m_inventory.add("FIRST DIGIT: 1");
-				m_pCurrentRoom = m_gameRooms.search(m_rooms[m_pCurrentRoom->m_getNeighbours(RIGHT)]);
 			}
 		}
 		if (input2 == "RADIO")
@@ -170,7 +137,6 @@ void Game::m_managePlayerInput(string input1, string input2)
 					cin >> answer;
 				}
 				m_inventory.add("SECOND DIGIT: 0");
-				m_pCurrentRoom = m_gameRooms.search(m_rooms[m_pCurrentRoom->m_getNeighbours(RIGHT)]);
 			}
 		}
 		if (input2 == "COMPUTER")
@@ -185,7 +151,6 @@ void Game::m_managePlayerInput(string input1, string input2)
 					cin >> answer;
 				}
 				m_inventory.add("THIRD DIGIT: 1");
-				m_pCurrentRoom = m_gameRooms.search(m_rooms[m_pCurrentRoom->m_getNeighbours(RIGHT)]);
 			}
 		}
 		if (input2 == "SAFE")
@@ -200,7 +165,6 @@ void Game::m_managePlayerInput(string input1, string input2)
 					cin >> answer;
 				}
 				m_inventory.add("FOURTH DIGIT: 1");
-				m_pCurrentRoom = m_gameRooms.search(m_rooms[m_pCurrentRoom->m_getNeighbours(RIGHT)]);
 			}
 		}
 		if (input2 == "KEYPAD")

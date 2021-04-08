@@ -5,9 +5,9 @@ Puzzle::Puzzle()
 
 }
 
-Puzzle::Puzzle(string key, string info1, string info2, string info3, string info4, string solution)
+Puzzle::Puzzle(string info1, string info2, string info3, string info4, string solution)
 {
-	m_setUpPuzzle(key, info1, info2, info3, info4, solution);
+	m_setUpPuzzle(info1, info2, info3, info4, solution);
 }
 
 Puzzle::~Puzzle()
@@ -15,9 +15,8 @@ Puzzle::~Puzzle()
 
 }
 
-void Puzzle::m_setUpPuzzle(string key, string info1, string info2, string info3, string info4, string solution)
+void Puzzle::m_setUpPuzzle(string info1, string info2, string info3, string info4, string solution)
 {
-	m_puzzleKey = key;
 	m_puzzleInfo1 = info1;
 	m_puzzleInfo2 = info2;
 	m_puzzleInfo3 = info3;
