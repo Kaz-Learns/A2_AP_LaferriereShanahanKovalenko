@@ -17,6 +17,13 @@ public:
 	void m_displayRoom();
 	string m_getRequiredInput();
 
+	string GetCommand();
+
+	string GetReturnCommand()
+	{
+		return m_command;
+	}
+
 private:
 
 	string m_roomName,
@@ -25,7 +32,8 @@ private:
 		m_storyLine2,
 		m_storyLine3,
 		m_storyLine4,
-		m_inputRequired;
+		m_inputRequired,
+		m_command;
 };
 
 #endif // !__ROOMS_H__

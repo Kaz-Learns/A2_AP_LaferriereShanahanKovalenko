@@ -12,8 +12,8 @@ CLEARING IN THE FOREST
 ----------------------
 This area has fewer trees, and a layer of fog covers the ground.
 You are shivering as the rainfall intensifies.
-It is now thunder and lightening. You need to find shelter.
-You see a large building in the distance AHEAD of you.
+It is now thunder and lightening. You hear a dog in the distance, CALL him?
+You also see a large building in the distance AHEAD of you.
 GO FORWARD
 ROOMEND
 ROOMSTART
@@ -26,7 +26,7 @@ You notice WIRES hanging from the main entrance keypad.
 INTERACT WIRES
 ROOMEND
 ROOMSTART
-INSANE ASYLUM - WIRES
+ INSANE ASYLUM - WIRES
 ---------------------
 You approach the wires, and notice they are all intact but one. You inspect the wires and their colours.
 The top row: the left wire is red, the middle wire is blue and the right wire is yellow.
@@ -35,7 +35,7 @@ You see 3 wires hanging down that are red, blue and yellow. You think about whic
 RED
 ROOMEND
 ROOMSTART
-ASYLUM FOYER
+ ASYLUM FOYER
 ------------
 You push open the door and enter the main foyer of the Asylum.
 The door slams shut behind you with a strong gust of wind.
@@ -44,7 +44,7 @@ You look around and see a hallway straight AHEAD of you.
 GO FORWARD
 ROOMEND
 ROOMSTART
-MAIN FLOOR
+ MAIN FLOOR
 ----------
 You slowly make your way down the hallway on the main floor.
 The floors creak beneath your feet with each step you take.
@@ -88,7 +88,7 @@ There are papers and files scattered everywhere.
 You notice an old COMPUTER on the desk with a flickering screen.
 INTERACT COMPUTER
 ROOMEND
-ROOM START
+ROOMSTART
 ADMIN OFFICE - COMPUTER
 -----------------------
 You walk behind the desk to view the flickering computer screen.
@@ -96,7 +96,7 @@ The computer is password protected. You click on the hint button.
 "If 3,5,2 = 16 and 1,7,5 = 40 then what is 9,2,3 = ?"
 You study the groups of numbers to think of how to calculate the password...
 33
-ROOM END
+ROOMEND
 ROOMSTART
 MAIN FLOOR
 ----------

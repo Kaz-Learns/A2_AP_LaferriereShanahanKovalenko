@@ -18,16 +18,35 @@ Game::~Game()
 
 void Game::m_RunGame()
 {
-	m_pCurrentRoom = m_gameRooms.front();
-    m_pCurrentRoom->m_displayRoom();
+	setRunning(true);
+	setDog(false);
 
-	// Need to set up proper user command getline
-	/*getline(cin, m_command);
-	m_managePlayerInput(m_command);*/
+	while (Game::getRunning())
+	{
 
-	// Just a test to ensure all rooms were added to the list from the text file
-	/*m_pCurrentRoom = m_gameRooms.back();
-	m_pCurrentRoom->m_displayRoom();*/
+		if (!m_gameRooms.empty())
+		{
+			m_pCurrentRoom = m_gameRooms.front();
+			m_pCurrentRoom->m_displayRoom();
+			m_pCurrentRoom->GetCommand();
+			cout << "\n";
+			m_managePlayerInput(m_pCurrentRoom->GetReturnCommand());
+		}
+
+		if (m_gameRooms.empty() && m_hasDog == true)
+		{
+			m_ending = 1;
+			m_displayGameEnding(m_ending);
+			setRunning(false);
+		}
+		else if (m_gameRooms.empty() && m_hasDog == false)
+		{
+			m_ending = 2;
+			m_displayGameEnding(m_ending);
+			setRunning(false);
+		}
+
+	}
 }
 
 bool Game::m_buildGame()
@@ -76,12 +95,21 @@ void Game::m_createRooms(string name, string underline, string story1, string st
 
 void Game::m_managePlayerInput(string input1)
 {
-	string answer;
+	//string answer;
 	
-	if (answer == m_pCurrentRoom->m_getRequiredInput())
+	if (input1 == m_pCurrentRoom->m_getRequiredInput())
 	{
 		m_gameRooms.remove(m_pCurrentRoom);
 	}
+	else if (input1 == "CALL DOG")
+	{
+		cout << "Seems the dog you heard has taken a liking to you! \n" << endl;
+		setDog(true);
+	}
+	else
+	{
+		cout << "Incorrect input try again...\n" << endl;
+	} 
 }
 
 void Game::m_displayGameEnding(int ending)
