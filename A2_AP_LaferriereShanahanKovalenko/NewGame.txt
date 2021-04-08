@@ -47,7 +47,7 @@ MAIN FLOOR
 You slowly make your way down the hallway on the main floor.
 The floors creak beneath your feet with each step you take.
 You have an unsettling feeling that you are not the only one here.
-You see a DOOR to your right. It looks like it leads to a kitchen.
+You see a DOOR. It looks like it leads to a kitchen.
 OPEN DOOR
 ROOMEND
 ROOMSTART
@@ -64,9 +64,9 @@ THE KITCHEN - RADIO
 -------------------
 You pick up the radio, press the button and say "Hello?".
 A creepy voice answers you, sending chills down your spine.
-"I don't have eyes, but once I did see. Once I had thoughts, but now I'm white and empty. What am I?"
+"I don't have eyes, but once I did see. Once I had thoughts, but now I'm white and empty. I am a...?"
 You think carefully before answering...
-A SKULL
+SKULL
 ROOMEND
 ROOMSTART
 MAIN FLOOR

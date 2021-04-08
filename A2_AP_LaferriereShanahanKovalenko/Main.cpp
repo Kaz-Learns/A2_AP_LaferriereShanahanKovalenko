@@ -10,7 +10,7 @@ int main()
 	//Welcome the user to the game.
 	cout << " WELCOME TO ASYLUM ADVENTURE\n ---------------------------\n";
 	
-	cout << " Please enter your name: ";
+	cout << " Please enter your first name: ";
 	cin >> playerName;
 
 	Game theGame;
