@@ -10,8 +10,6 @@ Game::Game()
     {
         m_isCreated = true;
     }
-	
-	
 }
 
 Game::~Game()
@@ -19,35 +17,10 @@ Game::~Game()
 
 void Game::m_RunGame()
 {
-	setRunning(true);
-
-	while (Game::getRunning())
-	{
-		m_pCurrentRoom = m_gameRooms.front();
-		m_pCurrentRoom->m_displayRoom();
-
-		m_pCurrentRoom->GetCommand();
-
-		
-		m_managePlayerInput(m_pCurrentRoom->GetReturnCommand());
-
-		
-
-		/*if (m_pCurrentRoom->GetReturnCommand() == m_pCurrentRoom->GetInputRequired())
-		{
-			NextRoom();
-		}*/
-	}
-
-	
-
-	// Need to set up proper user command getline
-	/*getline(cin, m_command);
-	m_managePlayerInput(m_command);*/
-
-	// Just a test to ensure all rooms were added to the list from the text file
-	/*m_pCurrentRoom = m_gameRooms.back();
-	m_pCurrentRoom->m_displayRoom();*/
+    while (!m_isCreated)
+    {
+        m_pCurrentRoom->m_displayRoom();
+    }
 }
 
 bool Game::m_buildRooms()
@@ -128,12 +101,7 @@ void Game::m_createRooms(string key, string name, string story1, string story2, 
 
 void Game::m_createPuzzle(string key, string info1, string info2, string info3, string info4, string solution)
 {
-	//string answer;
-	
-	if (input1 == m_pCurrentRoom->m_getRequiredInput())
-	{
-		m_gameRooms.remove(m_pCurrentRoom);
-	}
+	m_puzzles[key] = new Puzzle(key, info1, info2, info3, info4, solution);
 }
 
 void Game::m_managePlayerInput(string input1, string input2)
