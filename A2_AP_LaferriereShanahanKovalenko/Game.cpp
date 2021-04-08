@@ -29,8 +29,15 @@ void Game::m_RunGame()
 		if (!m_gameRooms.empty())
 		{
 			system("CLS");
+					 
+			cout << " --------------------------------------------------------------------------------------------------------------";
+			cout << "\n                                Use the following keywords while inputting commands:";
+			cout << "\n 'GO FORWARD' to advance, 'OPEN DOOR' to open door and 'INTERACT (INSERT PUZZLE NAME)' to interact with puzzles";
+			cout << "\n                       Input is NOT case sensitive. Make sure to remember any important NUMBERS...";
+			cout << "\n --------------------------------------------------------------------------------------------------------------\n\n";
 			m_pCurrentRoom = m_gameRooms.front();
 			m_pCurrentRoom->m_displayRoom();
+			cout << "\n ";
 			getline(cin, m_command);
 			transform(m_command.begin(), m_command.end(), m_command.begin(), toupper);
 			cout << "\n";
@@ -57,7 +64,7 @@ bool Game::m_buildGame()
 
 	if (!dataFile)
 	{
-		cout << "Error opening file.";
+		cout << " Error opening file.";
 		return false;
 	}
 
@@ -108,7 +115,7 @@ void Game::m_managePlayerInput(string input1)
 
 		if (!dataFile)
 		{
-			cout << "Error opening file.";
+			cout << " Error opening file.";
 		}
 
 		while (dataFile >> word)
@@ -123,7 +130,7 @@ void Game::m_managePlayerInput(string input1)
 				getline(dataFile, line5);
 
 				m_setWolf(true);
-				cout << line1 << endl << line2 << endl << line3 << endl << line4 << line5 << "\n\n";
+				cout << " " << line1 << "\n " << line2 << "\n " << line3 << "\n " << line4 << " " << line5 << "\n\n";
 
 				system("PAUSE");
 			}	
@@ -133,7 +140,7 @@ void Game::m_managePlayerInput(string input1)
 	}
 	else
 	{
-		cout << "Invalid command. Please try again...\n" << endl;
+		cout << " Invalid command. Please try again...\n" << endl;
 		system("PAUSE");
 	}
 }
@@ -147,7 +154,7 @@ void Game::m_displayGameEnding(int ending)
 
 	if (!dataFile)
 	{
-		cout << "Error opening file.";
+		cout << " Error opening file.";
 	}
 
 	// Local variables used to store info from the text file that will be used to output the ending
@@ -172,8 +179,8 @@ void Game::m_displayGameEnding(int ending)
 				getline(dataFile, line8);
 				getline(dataFile, line9);
 
-				cout << line1 << endl << line2 << endl << line3 << endl << line4 << endl << line5 <<
-					endl << line6 << endl << line7 << endl << line8 << endl << line9 <<"\n";
+				cout << " " << line1 << "\n " << line2 << "\n " << line3 << "\n " << line4 << "\n " << line5 <<
+					"\n " << line6 << "\n " << line7 << "\n " << line8 << "\n " << line9 <<"\n";
 			}
 		}
 		break;
@@ -193,8 +200,8 @@ void Game::m_displayGameEnding(int ending)
 				getline(dataFile, line8);
 				getline(dataFile, line9);
 
-				cout << line1 << endl << line2 << endl << line3 << endl << line4 << endl << line5 <<
-					endl << line6 << endl << line7 << endl << line8 << endl << line9 << "\n\n";
+				cout << " " << line1 << "\n " << line2 << "\n " << line3 << "\n " << line4 << "\n " << line5 <<
+					"\n " << line6 << "\n " << line7 << "\n " << line8 << "\n " << line9 << "\n\n";
 			}
 		}
 		break;

@@ -28,7 +28,7 @@ void Rooms::m_setUpRoom(string name, string underline, string story1, string sto
 
 void Rooms::m_displayRoom()
 {
-    cout << m_roomName << endl << m_roomUnderline << endl << m_storyLine1 << endl << m_storyLine2 << endl << m_storyLine3 << endl << m_storyLine4 << endl;
+    cout << " " << m_roomName << "\n " << m_roomUnderline << "\n " << m_storyLine1 << "\n " << m_storyLine2 << "\n " << m_storyLine3 << "\n " << m_storyLine4 << endl;
 }
 
 string Rooms::m_getRequiredInput()

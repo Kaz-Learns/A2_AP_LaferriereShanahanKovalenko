@@ -3,7 +3,7 @@ THE FOREST
 ----------
 You wake up suddenly in a forest in the dead of night.
 You have no recollection of who you are or how you got here.
-It is raining heavly, and you are soaking wet.
+It is raining heavily, and you are soaking wet.
 You see a clearing up AHEAD.
 GO FORWARD
 ROOMSTART
@@ -144,8 +144,8 @@ ROOMSTART
 NURSE'S OFFICE - KEYPAD
 -----------------------
 As you approach the keypad, you remember the numbers you collected from throughout the asylum...
-The first number was 1. The second number was 0.
-The third number was 1. The forth number was 1.
+The first number was carved into the front door. The second number was said through the radio.
+The third number was on the computer screen. The forth number was on a paper inside the safe.
 You carefully punch in the numbers in correct order...
 1011
 ROOMEND
@@ -155,7 +155,7 @@ WRONG
 You slowly open the door and walk into the office. 
 You begin looking through the desk for a master key to escape, when you hear the floor creak behind you.
 Before you can turn around, someone - or something - grabs you.
-The dog immediately pounces and attacks the mysterious figure, releasing you from the tight grip.
+The wolf immediately pounces and attacks the mysterious figure, releasing you from the tight grip.
 You turn around to see the figure laying on the ground in a pool of blood.
 You notice a master key lying in the blood, so you slowly reach down and grab it.
 You make your way down the hallway to the main entrance, and unlock the door.
@@ -177,7 +177,7 @@ You are insane.
 ENDINGEND
 
 WOLF
-You reach out and carefully pet the Wolf. It calms down and begins to lick your hand. 
-The Wolf seems to be innocent enough. 
-You decide to take the dog with you to seek shelter from the rain.
-You and the Wolf make your way towards the large building in the distance...
+You slowly approach the bush, afraid of what could be hiding within. You carefully pull back some leaves... 
+It reveals a wolf. It makes eye contact and begins to growl louder.
+You reach out and carefully pet the wolf. It calms down and begins to lick your hand. The wolf seems to be innocent enough.
+You decide to take the wolf with you to seek shelter from the rain. You both make your way towards the building...

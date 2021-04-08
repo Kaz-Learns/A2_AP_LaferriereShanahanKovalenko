@@ -8,19 +8,17 @@ int main()
 	string playerName;
 
 	//Welcome the user to the game.
-	cout << "Welcome to Asylum Adventure. \n" << endl;
-	cout << "Use the keywords:'GO FORWARD' to advance, 'OPEN DOOR' to open door and 'INTERACT (PUZZLE)' to interact with puzzles\n" << endl;
+	cout << " WELCOME TO ASYLUM ADVENTURE\n ---------------------------\n";
 	
-	cout << "Please enter your name: " << endl;
+	cout << " Please enter your name: ";
 	cin >> playerName;
-	cout << "\n" << endl;
 
 	Game theGame;
 	theGame.m_RunGame();
 
 	cout << endl;
-	cout << "Thanks for playing " << playerName << endl;
-	cout << "We hope you enjoyed your Asylum Adventure.";
+	cout << " Thank you for playing " << playerName << endl;
+	cout << " We hope you enjoyed your Asylum Adventure...\n\n";
 
 	return 0;
 }
