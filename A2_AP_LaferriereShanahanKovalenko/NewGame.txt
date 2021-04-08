@@ -1,13 +1,12 @@
 ROOMSTART
 THE FOREST
 ----------
-You wake up suddenly in a forest in the dead of night. 
-You have no recollection of who you are or how you got here. 
+You wake up suddenly in a forest in the dead of night.
+You have no recollection of who you are or how you got here.
 It is raining heavly, and you are soaking wet.
 You see a clearing up AHEAD.
 GO FORWARD
 ROOMEND
-
 ROOMSTART
 CLEARING IN THE FOREST
 ----------------------
@@ -17,7 +16,6 @@ It is now thunder and lightening. You need to find shelter.
 You see a large building in the distance AHEAD of you.
 GO FORWARD
 ROOMEND
-
 ROOMSTART
 INSANE ASYLUM
 -------------
@@ -27,7 +25,6 @@ You slowly walk up the steps to reach the front door.
 You notice WIRES hanging from the main entrance keypad.
 INTERACT WIRES
 ROOMEND
-
 ROOMSTART
 INSANE ASYLUM - WIRES
 ---------------------
@@ -37,17 +34,15 @@ The bottom row: the left wire is blue, the middle wire is yellow and the right w
 You see 3 wires hanging down that are red, blue and yellow. You think about which one to connect to the yellow wire...
 RED
 ROOMEND
-
 ROOMSTART
 ASYLUM FOYER
 ------------
 You push open the door and enter the main foyer of the Asylum.
-The door slams shut behind you with a strong gust of wind. 
+The door slams shut behind you with a strong gust of wind.
 You try to push the door back open, but it won't budge. You are now locked inside.
 You look around and see a hallway straight AHEAD of you.
 GO FORWARD
 ROOMEND
-
 ROOMSTART
 MAIN FLOOR
 ----------
@@ -57,7 +52,6 @@ You have an unsettling feeling that you are not the only one here.
 You see a DOOR to your right. It looks like it leads to a kitchen.
 OPEN DOOR
 ROOMEND
-
 ROOMSTART
 KITCHEN
 -------
@@ -67,7 +61,6 @@ Struggling to hold back bile, you make your way slowly towards the sound.
 You reach the source of the sound, and find out it is static coming from a two-way RADIO on the ground.
 INTERACT RADIO
 ROOMEND
-
 ROOMSTART
 KITCHEN - RADIO
 ---------------
@@ -77,7 +70,6 @@ A creepy voice answers you, sending chills down your spine.
 You think carefully before answering...
 A SKULL
 ROOMEND
-
 ROOMSTART
 MAIN FLOOR
 ----------
@@ -87,7 +79,6 @@ Slowly, you make your way across the creaky floors.
 You reach the the DOOR and read that it is an Admin Office.
 OPEN DOOR
 ROOMEND
-
 ROOMSTART
 ADMIN OFFICE
 ------------
@@ -97,7 +88,6 @@ There are papers and files scattered everywhere.
 You notice an old COMPUTER on the desk with a flickering screen.
 INTERACT COMPUTER
 ROOMEND
-
 ROOM START
 ADMIN OFFICE - COMPUTER
 -----------------------
@@ -107,7 +97,6 @@ The computer is password protected. You click on the hint button.
 You study the groups of numbers to think of how to calculate the password...
 33
 ROOM END
-
 ROOMSTART
 MAIN FLOOR
 ----------
@@ -117,7 +106,6 @@ You being walking faster, making your way further down the hallway.
 You spot a Security Office up AHEAD.
 GO FORWARD
 ROOMEND
-
 ROOMSTART
 SECURITY OFFICE
 ---------------
@@ -127,7 +115,6 @@ You search from top to bottom, but have no luck in finding one.
 You catch a glimpse of a large SAFE in a dark corner.
 INTERACT SAFE
 ROOMEND
-
 ROOMSTART
 SECURITY OFFICE - SAFE
 ----------------------
@@ -137,7 +124,6 @@ the 2nd digit is two times the 1st digit, the 2nd digit is half the 4th digit
 You begin to think this sounds more complicated than it really is...
 1234
 ROOMEND
-
 ROOMSTART
 MAIN FLOOR
 ----------
@@ -147,7 +133,6 @@ Your heart is beating rapidly, as you slowly make your way towards the door.
 You reach the the DOOR and read that it is the Nurse's Office.
 OPEN DOOR
 ROOMEND
-
 ROOMSTART
 NURSE'S OFFICE
 --------------
@@ -157,7 +142,6 @@ You try the handle, but the door is locked.
 You notice there is a numbered KEYPAD on the door.
 INTERACT KEYPAD
 ROOMEND
-
 ROOMSTART
 NURSE'S OFFICE - KEYPAD
 -----------------------

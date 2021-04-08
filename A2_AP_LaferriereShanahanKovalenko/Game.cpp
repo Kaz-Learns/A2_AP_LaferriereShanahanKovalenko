@@ -18,10 +18,16 @@ Game::~Game()
 
 void Game::m_RunGame()
 {
-    while (!m_isCreated)
-    {
-        m_pCurrentRoom->m_displayRoom();
-    }
+	m_pCurrentRoom = m_gameRooms.front();
+    m_pCurrentRoom->m_displayRoom();
+
+	// Need to set up proper user command getline
+	/*getline(cin, m_command);
+	m_managePlayerInput(m_command);*/
+
+	// Just a test to ensure all rooms were added to the list from the text file
+	/*m_pCurrentRoom = m_gameRooms.back();
+	m_pCurrentRoom->m_displayRoom();*/
 }
 
 bool Game::m_buildGame()
@@ -44,11 +50,13 @@ bool Game::m_buildGame()
 	{
 		if (word == "ROOMSTART")
 		{
+			dataFile >> word;
 			getline(dataFile, name);
 			getline(dataFile, underline);
 			getline(dataFile, story1);
 			getline(dataFile, story2);
 			getline(dataFile, story3);
+			getline(dataFile, story4);
 			getline(dataFile, inputRequired);
 
 			// Creates a room with the information from the text file
@@ -63,16 +71,16 @@ bool Game::m_buildGame()
 
 void Game::m_createRooms(string name, string underline, string story1, string story2, string story3, string story4, string inputRequired)
 {
-	m_gameRooms.add(new Rooms(name, underline, story1, story2, story3, story4, inputRequired));
+	m_gameRooms.push_back(new Rooms(name, underline, story1, story2, story3, story4, inputRequired));
 }
 
-void Game::m_managePlayerInput(string input1, string input2)
+void Game::m_managePlayerInput(string input1)
 {
 	string answer;
 	
 	if (answer == m_pCurrentRoom->m_getRequiredInput())
 	{
-		// Move to the next room
+		m_gameRooms.remove(m_pCurrentRoom);
 	}
 }
 
@@ -81,7 +89,7 @@ void Game::m_displayGameEnding(int ending)
 	// Used to skip unused text in text file
 	string word;
 
-	ifstream dataFile("Game.txt", ios::in);
+	ifstream dataFile("NewGame.txt", ios::in);
 
 	if (!dataFile)
 	{

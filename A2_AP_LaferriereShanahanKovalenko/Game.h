@@ -5,6 +5,7 @@
 #include <fstream>
 #include <string>
 #include <map>
+#include <list>
 #include "Rooms.h"
 #include "Puzzle.h"
 #include "Inventory.h"
@@ -22,20 +23,16 @@ public:
 private:
 	bool m_buildGame();
 	void m_createRooms(string name, string underline, string story1, string story2, string story3, string story4, string inputRequired);
-	void m_managePlayerInput(string input1, string input2);
+	void m_managePlayerInput(string input1);
 	void m_displayGameEnding(int ending);
 	
 	string m_lastRoom; // To track last visited room
+	std::list<Rooms*>m_gameRooms;
 
-	List<Rooms*> m_gameRooms;
+	/*List<Rooms*> m_gameRooms;*/
 	Rooms* m_pCurrentRoom; // To track current room
 
-	List<Puzzle*> m_gamePuzzles;
-	Puzzle* m_pCurrentPuzzle; // To track current puzzle
-
-	List<string> m_inventory;
-	string item; // To track the player's items
-
+	string m_command;
 	bool m_isCreated;
 	bool m_hasDog;
 };
