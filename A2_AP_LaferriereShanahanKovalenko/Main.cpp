@@ -9,7 +9,7 @@ int main()
 
 	//Welcome the user to the game.
 	cout << "Welcome to Asylum Adventure. \n" << endl;
-	cout << "Use the keywords:'GO FORWARD' to advance, 'OPEN DOOR' to open door and 'INTERACT (PUZZLE)' to interact with puzzles" << endl;
+	cout << "Use the keywords:'GO FORWARD' to advance, 'OPEN DOOR' to open door and 'INTERACT (PUZZLE)' to interact with puzzles\n" << endl;
 	
 	cout << "Please enter your name: " << endl;
 	cin >> playerName;

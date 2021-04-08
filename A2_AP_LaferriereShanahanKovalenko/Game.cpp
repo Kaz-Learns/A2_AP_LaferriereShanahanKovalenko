@@ -19,7 +19,7 @@ Game::~Game()
 void Game::m_RunGame()
 {
 	setRunning(true);
-	setDog(false);
+	setWolf(false);
 	
 	cin.ignore();
 
@@ -95,20 +95,46 @@ void Game::m_createRooms(string name, string underline, string story1, string st
 void Game::m_managePlayerInput(string input1)
 {
 	//string answer;
-	
+
 	if (input1 == m_pCurrentRoom->m_getRequiredInput())
 	{
 		m_gameRooms.remove(m_pCurrentRoom);
 	}
-	else if (input1 == "CALL DOG")
+	else if (input1 == "GO RIGHT")
 	{
-		cout << "Seems the dog you heard has taken a liking to you! He is following you around... \n" << endl;
-		setDog(true);
+		m_gameRooms.remove(m_pCurrentRoom);
+
+		string word, line1, line2, line3, line4, line5;
+
+		ifstream dataFile("NewGame.txt", ios::in);
+
+		if (!dataFile)
+		{
+			cout << "Error opening file.";
+		}
+
+		while (dataFile >> word)
+		{
+			if (word == "WOLF")
+			{
+				dataFile.ignore();
+				getline(dataFile, line1);
+				getline(dataFile, line2);
+				getline(dataFile, line3);
+				getline(dataFile, line4);
+				getline(dataFile, line5);
+
+				setWolf(true);
+				cout << line1 << endl << line2 << endl << line3 << endl << line4 << line5 << "\n\n";
+			}	
+		}
+
+		dataFile.close();
 	}
 	else
 	{
 		cout << "Incorrect input try again...\n" << endl;
-	} 
+	}
 }
 
 void Game::m_displayGameEnding(int ending)

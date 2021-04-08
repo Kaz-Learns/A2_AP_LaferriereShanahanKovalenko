@@ -36,7 +36,7 @@ public:
 		return m_ending;
 	}
 
-	void setDog(bool dog)
+	void setWolf(bool dog)
 	{
 		m_hasDog = dog;
 	}

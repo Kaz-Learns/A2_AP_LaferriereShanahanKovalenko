@@ -11,7 +11,7 @@ CLEARING IN THE FOREST
 ----------------------
 This area has fewer trees, and a layer of fog covers the ground.
 You are shivering as the rainfall intensifies.
-It is now thunder and lightening. You hear a dog in the distance, CALL him?
+It is now thunder and lightening. You hear a growl coming from a bush on your RIGHT.
 You also see a large building in the distance AHEAD of you.
 GO FORWARD
 ROOMSTART
@@ -175,3 +175,9 @@ You are in a straight jacket.
 You live here.
 You are insane.
 ENDINGEND
+
+WOLF
+You reach out and carefully pet the Wolf. It calms down and begins to lick your hand. 
+The Wolf seems to be innocent enough. 
+You decide to take the dog with you to seek shelter from the rain.
+You and the Wolf make your way towards the large building in the distance...
