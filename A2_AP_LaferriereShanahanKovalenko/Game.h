@@ -4,11 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <map>
 #include <list>
 #include "Rooms.h"
-#include "Puzzle.h"
-#include "Inventory.h"
 #include "List.h"
 using namespace std;
 
