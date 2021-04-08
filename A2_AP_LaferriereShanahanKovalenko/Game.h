@@ -9,7 +9,6 @@
 #include "Puzzle.h"
 #include "Inventory.h"
 #include "List.h"
-#include <list>
 using namespace std;
 
 class Game
