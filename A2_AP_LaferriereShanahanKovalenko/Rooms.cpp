@@ -5,10 +5,9 @@ Rooms::Rooms()
   
 }
 
-Rooms::Rooms(string key, string name, string story1, string story2, string story3, string description, string item, string puzzle, string death)
+Rooms::Rooms(string name, string underline, string story1, string story2, string story3, string story4, string inputRequired)
 {
-    m_setUpRoom(key, name, story1, story2, story3, description, item, puzzle, death);
- 
+    m_setUpRoom(name, underline, story1, story2, story3, story4, inputRequired);
 }
 
 Rooms::~Rooms()
@@ -16,56 +15,25 @@ Rooms::~Rooms()
     
 }
 
-void Rooms::m_setUpRoom(string key, string name, string story1, string story2, string story3, string description, string item, string puzzle, string death)
+void Rooms::m_setUpRoom(string name, string underline, string story1, string story2, string story3, string story4, string inputRequired)
 {
-    m_roomKey = key;
     m_roomName = name;
+    m_roomUnderline = underline;
     m_storyLine1 = story1;
     m_storyLine2 = story2;
     m_storyLine3 = story3;
-    m_roomDescription = description;
-    m_roomItem = item;
-    m_roomPuzzle = puzzle;
-    m_roomDeath = death;
-
-    for (int i = 0; i < 3; i++)
-    {
-        m_neighbourKeys[i] = "NULL";
-    }
-}
-
-void Rooms::m_setNeighbours(string back, string right, string left)
-{
-    m_neighbourKeys[BACK] = back;
-    m_neighbourKeys[RIGHT] = right;
-    m_neighbourKeys[LEFT] = left;
-}
-
-bool Rooms::m_canUsePath(ChoicePath direction)
-{
-    for (int i = 0; i < 3; i++)
-    {
-        if (direction == ChoicePath(i) && m_neighbourKeys[i] != "NULL")
-        {
-            return true;
-        }
-    }
-    return false;
-}
-
-string Rooms::m_getNeighbours(ChoicePath direction)
-{
-    return m_neighbourKeys[direction];
-}
-
-string Rooms::m_getKey()
-{
-    return m_roomKey;
+    m_storyLine4 = story4;
+    m_inputRequired = inputRequired;
 }
 
 void Rooms::m_displayRoom()
 {
-    cout << m_roomName << endl;
+    cout << m_roomName << endl << m_roomUnderline << endl << m_storyLine1 << endl << m_storyLine2 << endl << m_storyLine3 << endl << m_storyLine4 << endl;
+}
+
+string Rooms::m_getRequiredInput()
+{
+    return m_inputRequired;
 }
 
 

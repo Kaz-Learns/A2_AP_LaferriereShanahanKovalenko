@@ -33,7 +33,7 @@ You walk through some trees to reach the house.
 It looks like it has been abandoned for a while, and is surrounded by a fence.
 You feel extremely uneasy approaching the creepy old house.
 You see a hole in the fence leading to the FRONT YARD on your RIGHT, and notice a CLEARING in the forest to your LEFT.
-BACK FOREST
+BACK NULL
 RIGHT YARD
 LEFT CLEARING
 ITEM NULL
@@ -117,7 +117,7 @@ You slowly make your way down the hallway on the main floor.
 The floors creak beneath your feet with each step you take.
 You have an unsettling feeling that you are not the only one here.
 You see a KITCHEN to your RIGHT and a NURSE'S OFFICE on your LEFT.
-BACK NULL
+BACK FOYER
 RIGHT KITCHEN
 LEFT NURSE
 ITEM NULL
@@ -159,7 +159,7 @@ You begin to make your way up the creaky old staircase.
 As you step down on the fifth stair, the tread breaks and your foot goes right through.
 You grab onto the railing and pull your foot out of the hole, continuing up the staircase.
 You reach the top floor and see an ADMIN'S OFFICE on your RIGHT, and a SECURITY OFFICE on your LEFT.
-BACK NULL
+BACK FOYER
 RIGHT OFFICE
 LEFT SECURITY
 ITEM NULL

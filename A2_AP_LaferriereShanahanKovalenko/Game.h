@@ -4,10 +4,9 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <map>
+#include <list>
 #include "Rooms.h"
-#include "Puzzle.h"
-#include "Inventory.h"
+#include "List.h"
 using namespace std;
 
 class Game
@@ -19,20 +18,20 @@ public:
 	void m_RunGame();
 
 private:
-	bool m_buildRooms();
-	void m_createRooms(string key, string name, string story1, string story2, string story3, 
-		string description, string back, string right, string left, string item, string puzzle, string death);
-	void m_createPuzzle(string key, string info1, string info2, string info3, string info4, string solution);
-	void m_managePlayerInput(string input1, string input2); 
-
-	map<string, Rooms*> m_rooms; // To store all existing rooms
-	Rooms* m_pCurrentRoom; // To track current room
+	bool m_buildGame();
+	void m_createRooms(string name, string underline, string story1, string story2, string story3, string story4, string inputRequired);
+	void m_managePlayerInput(string input1);
+	void m_displayGameEnding(int ending);
+	
 	string m_lastRoom; // To track last visited room
+	std::list<Rooms*>m_gameRooms;
 
-	map<string, Puzzle*> m_puzzles; // To story all the puzzles
-	Puzzle* m_pCurrentPuzzle; // To track current puzzle
+	/*List<Rooms*> m_gameRooms;*/
+	Rooms* m_pCurrentRoom; // To track current room
 
+	string m_command;
 	bool m_isCreated;
+	bool m_hasDog;
 };
 
 
