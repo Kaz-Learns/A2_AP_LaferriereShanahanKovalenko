@@ -20,10 +20,11 @@ void Game::m_RunGame()
 {
 	setRunning(true);
 	setDog(false);
+	
+	cin.ignore();
 
 	while (Game::getRunning())
 	{
-
 		if (!m_gameRooms.empty())
 		{
 			m_pCurrentRoom = m_gameRooms.front();
@@ -32,7 +33,6 @@ void Game::m_RunGame()
 			cout << "\n";
 			m_managePlayerInput(m_pCurrentRoom->GetReturnCommand());
 		}
-
 		if (m_gameRooms.empty() && m_hasDog == true)
 		{
 			m_ending = 1;
@@ -45,7 +45,6 @@ void Game::m_RunGame()
 			m_displayGameEnding(m_ending);
 			setRunning(false);
 		}
-
 	}
 }
 
