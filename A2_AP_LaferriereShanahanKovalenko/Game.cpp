@@ -168,7 +168,7 @@ void Game::m_displayGameEnding(int ending)
 				getline(dataFile, line9);
 
 				cout << line1 << endl << line2 << endl << line3 << endl << line4 << endl << line5 <<
-					endl << line6 << endl << line7 << endl << line8 << endl << line9 << "\n";
+					endl << line6 << endl << line7 << endl << line8 << endl << line9 << "\n\n";
 			}
 		}
 		break;
