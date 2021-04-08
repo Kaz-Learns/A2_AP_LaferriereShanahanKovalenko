@@ -3,6 +3,7 @@
 #define __ROOMS_H__
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 class Rooms
@@ -16,13 +17,6 @@ public:
 	void m_setUpRoom(string name, string underline, string story1, string story2, string story3, string story4, string inputRequired);
 	void m_displayRoom();
 	string m_getRequiredInput();
-
-	string GetCommand();
-
-	string GetReturnCommand()
-	{
-		return m_command;
-	}
 
 private:
 

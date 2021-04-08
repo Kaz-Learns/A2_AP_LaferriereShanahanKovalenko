@@ -16,53 +16,24 @@ public:
 	~Game();
 
 	void m_RunGame();
-
-	void setRunning(bool running)
-	{
-		m_gameRunning = running;
-	}
-	bool getRunning()
-	{
-		return m_gameRunning;
-	}
-
-	void setEnding(int ending)
-	{
-		m_ending = ending;
-	}
-
-	int getEnding()
-	{
-		return m_ending;
-	}
-
-	void setWolf(bool dog)
-	{
-		m_hasDog = dog;
-	}
-
-	bool getDog()
-	{
-		return m_hasDog;
-	}
-
-private:
 	bool m_buildGame();
 	void m_createRooms(string name, string underline, string story1, string story2, string story3, string story4, string inputRequired);
 	void m_managePlayerInput(string input1);
 	void m_displayGameEnding(int ending);
-	
-	string m_lastRoom; // To track last visited room
-	std::list<Rooms*>m_gameRooms;
+	void m_setRunning(bool running);
+	void m_setWolf(bool wolf);
+	bool m_getWolf();
+	bool m_getRunning();
 
-	/*List<Rooms*> m_gameRooms;*/
+private:
+	std::list<Rooms*>m_gameRooms;
 	Rooms* m_pCurrentRoom; // To track current room
 
 	string m_command;
 	int m_ending;
-	bool m_isCreated;
-	bool m_hasDog;
-	bool m_gameRunning;
+	bool m_isCreated,
+		m_hasWolf,
+		m_gameRunning;
 };
 
 

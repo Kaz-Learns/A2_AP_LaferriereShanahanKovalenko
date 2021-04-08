@@ -1,4 +1,5 @@
 #include "Game.h"
+#include <algorithm>
 
 Game::Game()
 {
@@ -18,41 +19,40 @@ Game::~Game()
 
 void Game::m_RunGame()
 {
-	setRunning(true);
-	setWolf(false);
+	m_setRunning(true);
+	m_setWolf(false);
 	
 	cin.ignore();
-
-	while (Game::getRunning())
+	
+	while (Game::m_getRunning())
 	{
 		if (!m_gameRooms.empty())
 		{
+			system("CLS");
 			m_pCurrentRoom = m_gameRooms.front();
 			m_pCurrentRoom->m_displayRoom();
-			m_pCurrentRoom->GetCommand();
+			getline(cin, m_command);
+			transform(m_command.begin(), m_command.end(), m_command.begin(), toupper);
 			cout << "\n";
-			m_managePlayerInput(m_pCurrentRoom->GetReturnCommand());
+			m_managePlayerInput(m_command);
 		}
-		if (m_gameRooms.empty() && m_hasDog == true)
+		if (m_gameRooms.empty() && m_hasWolf == true)
 		{
 			m_ending = 1;
 			m_displayGameEnding(m_ending);
-			setRunning(false);
+			m_setRunning(false);
 		}
-		else if (m_gameRooms.empty() && m_hasDog == false)
+		else if (m_gameRooms.empty() && m_hasWolf == false)
 		{
 			m_ending = 2;
 			m_displayGameEnding(m_ending);
-			setRunning(false);
+			m_setRunning(false);
 		}
 	}
 }
 
 bool Game::m_buildGame()
 {
-	// Used to skip unused text in text file
-	/*string word;*/
-
 	ifstream dataFile("NewGame.txt", ios::in);
 
 	if (!dataFile)
@@ -61,7 +61,7 @@ bool Game::m_buildGame()
 		return false;
 	}
 
-	// Local variables used to store info from the text file that will be used to create room objects & puzzles
+	// Local variables used to store info from the text file that will be used to create room objects
 	string word, name, underline, story1, story2, story3, story4, inputRequired;
 	
 	while (dataFile >> word)
@@ -94,8 +94,6 @@ void Game::m_createRooms(string name, string underline, string story1, string st
 
 void Game::m_managePlayerInput(string input1)
 {
-	//string answer;
-
 	if (input1 == m_pCurrentRoom->m_getRequiredInput())
 	{
 		m_gameRooms.remove(m_pCurrentRoom);
@@ -124,8 +122,10 @@ void Game::m_managePlayerInput(string input1)
 				getline(dataFile, line4);
 				getline(dataFile, line5);
 
-				setWolf(true);
+				m_setWolf(true);
 				cout << line1 << endl << line2 << endl << line3 << endl << line4 << line5 << "\n\n";
+
+				system("PAUSE");
 			}	
 		}
 
@@ -133,7 +133,8 @@ void Game::m_managePlayerInput(string input1)
 	}
 	else
 	{
-		cout << "Incorrect input try again...\n" << endl;
+		cout << "Invalid command. Please try again...\n" << endl;
+		system("PAUSE");
 	}
 }
 
@@ -200,4 +201,24 @@ void Game::m_displayGameEnding(int ending)
 	}
 	//Close the file
 	dataFile.close();
+}
+
+void Game::m_setRunning(bool running)
+{
+	m_gameRunning = running;
+}
+
+bool Game::m_getRunning()
+{
+	return m_gameRunning;
+}
+
+void Game::m_setWolf(bool wolf)
+{
+	m_hasWolf = wolf;
+}
+
+bool Game::m_getWolf()
+{
+	return m_hasWolf;
 }

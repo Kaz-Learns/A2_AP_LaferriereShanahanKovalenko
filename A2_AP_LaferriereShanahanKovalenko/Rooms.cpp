@@ -36,17 +36,6 @@ string Rooms::m_getRequiredInput()
     return m_inputRequired;
 }
 
-string Rooms::GetCommand()
-{
-    string command;
-
-    std::getline(cin, command);
-
-    m_command = command;
-
-    return command;
-}
-
 
 
 

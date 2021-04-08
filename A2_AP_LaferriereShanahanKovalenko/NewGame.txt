@@ -35,8 +35,8 @@ ROOMEND
 ROOMSTART
 ASYLUM FOYER
 ------------
-You push open the door and enter the main foyer of the Asylum.
-The door slams shut behind you with a strong gust of wind.
+Sparks fly out of the keypad, and the door unlocks. You push open the door and enter the main foyer of the Asylum.
+The door slams shut behind you with a strong gust of wind. You notice the number 1 carved into the back of the door.
 You try to push the door back open, but it won't budge. You are now locked inside.
 You look around and see a hallway straight AHEAD of you.
 GO FORWARD
@@ -71,9 +71,9 @@ ROOMEND
 ROOMSTART
 MAIN FLOOR
 ----------
+The creepy voice answers "Correct...The second number is 0." You wonder what you will need this number for...
 You make your way back out of the kitchen, thankful you've escaped the smell.
-Walking further down the hallway, you spot a door with light shining out from under it.
-Slowly, you make your way across the creaky floors.
+Continuing down the hallway, you spot a door with light shining out from under it. Slowly, you make your way across the creaky floors.
 You reach the the DOOR and read that it is an Admin Office.
 OPEN DOOR
 ROOMEND
@@ -98,7 +98,7 @@ ROOMEND
 ROOMSTART
 MAIN FLOOR
 ----------
-You make your way back out of the office.
+You log into the computer and see the number 1 on the screen. With nothing left to search, you make your way back out of the office.
 Another uneasy feeling of being watched rushes over you. You need to get out of here.
 You being walking faster, making your way further down the hallway.
 You spot a Security Office up AHEAD.
@@ -125,7 +125,7 @@ ROOMEND
 ROOMSTART
 MAIN FLOOR
 ----------
-You make your way back out of the office.
+You retrieve a small ripped paper from inside the safe with the number 1 on it. You make your way back out of the office.
 As you exit, you spot a dark figure enter a room a few doors down.
 Your heart is beating rapidly, as you slowly make your way towards the door.
 You reach the the DOOR and read that it is the Nurse's Office.
@@ -143,7 +143,7 @@ ROOMEND
 ROOMSTART
 NURSE'S OFFICE - KEYPAD
 -----------------------
-As you approach the keypad, you remember the codes you collected from throughout the asylum...
+As you approach the keypad, you remember the numbers you collected from throughout the asylum...
 The first number was 1. The second number was 0.
 The third number was 1. The forth number was 1.
 You carefully punch in the numbers in correct order...
