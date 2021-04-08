@@ -5,6 +5,7 @@ You wake up suddenly in a forest in the dead of night.
 You have no recollection of who you are or how you got here. 
 It is raining heavly, and you are soaking wet.
 You see a clearing up AHEAD.
+GO FORWARD
 ROOMEND
 
 ROOMSTART
@@ -14,6 +15,7 @@ This area has fewer trees, and a layer of fog covers the ground.
 You are shivering as the rainfall intensifies.
 It is now thunder and lightening. You need to find shelter.
 You see a large building in the distance AHEAD of you.
+GO FORWARD
 ROOMEND
 
 ROOMSTART
@@ -23,6 +25,16 @@ As you approach the large dark creepy building, you realize it is an old insane 
 You immediately feel uneasy, and your heart begins beating rapidly.
 You slowly walk up the steps to reach the front door.
 You notice WIRES hanging from the main entrance keypad.
+INTERACT WIRES
+ROOMEND
+
+ROOMSTART
+WIRES
+You approach the wires, and notice they are all intact but one. You inspect the wires and their colours.
+The top row: the left wire is red, the middle wire is blue and the right wire is yellow.
+The bottom row: the left wire is blue, the middle wire is yellow and the right wire is missing.
+You see 3 wires hanging down that are red, blue and yellow. You think about which one to connect to the yellow wire...
+RED
 ROOMEND
 
 ROOMSTART
@@ -32,6 +44,7 @@ You push open the door and enter the main foyer of the Asylum.
 The door slams shut behind you with a strong gust of wind. 
 You try to push the door back open, but it won't budge. You are now locked inside.
 You look around and see a hallway straight AHEAD of you.
+GO FORWARD
 ROOMEND
 
 ROOMSTART
@@ -41,6 +54,7 @@ You slowly make your way down the hallway on the main floor.
 The floors creak beneath your feet with each step you take.
 You have an unsettling feeling that you are not the only one here.
 You see a DOOR to your right. It looks like it leads to a kitchen.
+OPEN DOOR
 ROOMEND
 
 ROOMSTART
@@ -50,6 +64,16 @@ As you step into the kitchen, a rancid smell of rotting flesh hits you.
 You hear a faint sound coming from the back of the kitchen.
 Struggling to hold back bile, you make your way slowly towards the sound.
 You reach the source of the sound, and find out it is static coming from a two-way RADIO on the ground.
+INTERACT RADIO
+ROOMEND
+
+ROOMSTART
+RADIO
+You pick up the radio, press the button and say "Hello?".
+A creepy voice answers you, sending chills down your spine.
+"I don't have eyes, but once I did see. Once I had thoughts, but now I'm white and empty. What am I?"
+You think carefully before answering...
+A SKULL
 ROOMEND
 
 ROOMSTART
@@ -59,6 +83,7 @@ You make your way back out of the kitchen, thankful you've escaped the smell.
 Walking further down the hallway, you spot a door with light shining out from under it.
 Slowly, you make your way across the creaky floors.
 You reach the the DOOR and read that it is an Admin Office.
+OPEN DOOR
 ROOMEND
 
 ROOMSTART
@@ -68,7 +93,17 @@ As you enter the room, you get the feeling someone is watching you...
 You inspect the room, looking for anything that could help you escape.
 There are papers and files scattered everywhere.
 You notice an old COMPUTER on the desk with a flickering screen.
+INTERACT COMPUTER
 ROOMEND
+
+ROOM START
+COMPUTER
+You walk behind the desk to view the flickering computer screen.
+The computer is password protected. You click on the hint button.
+"If 3,5,2 = 16 and 1,7,5 = 40 then what is 9,2,3 = ?"
+You study the groups of numbers to think of how to calculate the password...
+33
+ROOM END
 
 ROOMSTART
 MAIN FLOOR
@@ -77,6 +112,7 @@ You make your way back out of the office.
 Another uneasy feeling of being watched rushes over you. You need to get out of here.
 You being walking faster, making your way further down the hallway.
 You spot a Security Office up AHEAD.
+GO FORWARD
 ROOMEND
 
 ROOMSTART
@@ -86,6 +122,16 @@ You approach the door to the Security Office and notice it has been pryed open.
 After entering the office, you begin searching for a master keycard for the front door.
 You search from top to bottom, but have no luck in finding one.
 You catch a glimpse of a large SAFE in a dark corner.
+INTERACT SAFE
+ROOMEND
+
+ROOMSTART
+SAFE
+As you bend down, you notice a sticky note stuck on the front of the safe.
+the 1st digit plus the 2nd digit is equal to the 3rd digit
+the 2nd digit is two times the 1st digit, the 2nd digit is half the 4th digit
+You begin to think this sounds more complicated than it really is...
+1234
 ROOMEND
 
 ROOMSTART
@@ -95,6 +141,7 @@ You make your way back out of the office.
 As you exit, you spot a dark figure enter a room a few doors down.
 Your heart is beating rapidly, as you slowly make your way towards the door.
 You reach the the DOOR and read that it is the Nurse's Office.
+OPEN DOOR
 ROOMEND
 
 ROOMSTART
@@ -104,49 +151,18 @@ You place your hand on the handle of the office door.
 You hear a faint rustle coming from inside the office.
 You try the handle, but the door is locked.
 You notice there is a numbered KEYPAD on the door.
+INTERACT KEYPAD
 ROOMEND
 
-
-PUZZLESTART
-WIRES
-You approach the wires, and notice they are all intact but one. You inspect the wires and their colours.
-The top row: the left wire is red, the middle wire is blue and the right wire is yellow.
-The bottom row: the left wire is blue, the middle wire is yellow and the right wire is missing.
-You see 3 coloured wires hanging down that are red, blue and yellow. You think carefully before choosing one to connect to the yellow wire...
-SOLUTION RED
-PUZZLEEND
-PUZZLESTART
-RADIO
-You pick up the radio, press the button and say "Hello?".
-A creepy voice answers you, sending chills down your spine.
-"I don't have eyes, but once I did see. Once I had thoughts, but now I'm white and empty. I am a ..?"
-You think carefully before answering...
-SOLUTION SKULL
-PUZZLEEND
-PUZZLESTART
-COMPUTER
-You walk behind the desk to view the flickering computer screen.
-The computer is password protected. You click on the hint button.
-"If 3,5,2 = 16 and 1,7,5 = 40 then what is 9,2,3 = ?"
-You study the groups of numbers to think of how to calculate the password...
-SOLUTION 33
-PUZZLEEND
-PUZZLESTART
-SAFE
-As you bend down, you notice a sticky note stuck on the front of the safe.
-the 1st digit plus the 2nd digit is equal to the 3rd digit
-the 2nd digit is two times the 1st digit, the 2nd digit is half the 4th digit
-You begin to think this sounds more complicated than it really is...
-SOLUTION 1234
-PUZZLEEND
-PUZZLESTART
+ROOMSTART
 KEYPAD
 As you approach the keypad, you remember the codes you collected from throughout the asylum...
 The first number was 1. The second number was 0.
 The third number was 1. The forth number was 1.
 You carefully punch in the numbers in correct order...
-SOLUTION 1011
-PUZZLEEND
+1011
+ROOMEND
+
 ENDINGSTART
 WRONG
 You slowly open the door and walk into the office. 
@@ -159,6 +175,7 @@ You make your way down the hallway to the main entrance, and unlock the door.
 Stepping outside, the rain has stopped and the sun is now rising. 
 As you walk away from the asylum, you have an uneasy feeling everything was not how it seemed...
 ENDINGEND
+
 ENDINGSTART
 RIGHT
 You slowly open the door and walk into the office. 
