@@ -5,11 +5,12 @@ Game::Game()
     m_pCurrentRoom = nullptr;
     m_isCreated = false;
 
-    bool created = m_buildRooms();
+    bool created = m_buildGame();
     if (!created)
     {
         m_isCreated = true;
     }
+	
 }
 
 Game::~Game()
@@ -17,18 +18,43 @@ Game::~Game()
 
 void Game::m_RunGame()
 {
-    while (!m_isCreated)
-    {
-        m_pCurrentRoom->m_displayRoom();
-    }
+	setRunning(true);
+	setDog(false);
+
+	while (Game::getRunning())
+	{
+
+		if (!m_gameRooms.empty())
+		{
+			m_pCurrentRoom = m_gameRooms.front();
+			m_pCurrentRoom->m_displayRoom();
+			m_pCurrentRoom->GetCommand();
+			cout << "\n";
+			m_managePlayerInput(m_pCurrentRoom->GetReturnCommand());
+		}
+
+		if (m_gameRooms.empty() && m_hasDog == true)
+		{
+			m_ending = 1;
+			m_displayGameEnding(m_ending);
+			setRunning(false);
+		}
+		else if (m_gameRooms.empty() && m_hasDog == false)
+		{
+			m_ending = 2;
+			m_displayGameEnding(m_ending);
+			setRunning(false);
+		}
+
+	}
 }
 
-bool Game::m_buildRooms()
+bool Game::m_buildGame()
 {
 	// Used to skip unused text in text file
-	string word;
+	/*string word;*/
 
-	ifstream dataFile("Game.txt", ios::in);
+	ifstream dataFile("NewGame.txt", ios::in);
 
 	if (!dataFile)
 	{
@@ -37,140 +63,116 @@ bool Game::m_buildRooms()
 	}
 
 	// Local variables used to store info from the text file that will be used to create room objects & puzzles
-	string key, name, story1, story2, story3, story4, description, back, right, left, item, puzzle, death;
+	string word, name, underline, story1, story2, story3, story4, inputRequired;
 	
 	while (dataFile >> word)
 	{
 		if (word == "ROOMSTART")
 		{
-			dataFile >> key;
 			dataFile.ignore();
 			getline(dataFile, name);
-			getline(dataFile, story1);
-			getline(dataFile, story2);
-			getline(dataFile, story3);
-			getline(dataFile, description);
-			dataFile >> word;
-			dataFile >> back;
-			dataFile >> word;
-			dataFile >> right;
-			dataFile >> word;
-			dataFile >> left;
-			dataFile >> word;
-			dataFile >> item;
-			dataFile >> word;
-			dataFile >> puzzle;
-			dataFile >> word;
-			dataFile >> death;
-
-			// Creates a room with the information from the text file
-			m_createRooms(key, name, story1, story2, story3, description, back, right, left, item, puzzle, death);
-		}
-
-		if (word == "PUZZLESTART")
-		{
-			dataFile >> key;
-			dataFile.ignore();
+			getline(dataFile, underline);
 			getline(dataFile, story1);
 			getline(dataFile, story2);
 			getline(dataFile, story3);
 			getline(dataFile, story4);
-			dataFile >> word;
-			dataFile >> puzzle;
+			getline(dataFile, inputRequired);
 
-			// Creates a puzzle with the information from the text file
-			m_createPuzzle(key, story1, story2, story3, story4, puzzle);
+			// Creates a room with the information from the text file
+			m_createRooms(name, underline, story1, story2, story3, story4, inputRequired);
 		}
-
-		// Cout the ending based on whether the player has the dog or not - this will be read from the file during the run function of the game
-		
 	}
-
 	//Close the file
 	dataFile.close();
 
 	return true;
 }
 
-void Game::m_createRooms(string key, string name, string story1, string story2, string story3, 
-	string description, string back, string right, string left, string item, string puzzle, string death)
+void Game::m_createRooms(string name, string underline, string story1, string story2, string story3, string story4, string inputRequired)
 {
-	m_rooms[key] = new Rooms(key, name, story1, story2, story3, description, item, puzzle, death);
-	m_rooms[key]->m_setNeighbours(back, right, left);
+	m_gameRooms.push_back(new Rooms(name, underline, story1, story2, story3, story4, inputRequired));
 }
 
-void Game::m_createPuzzle(string key, string info1, string info2, string info3, string info4, string solution)
+void Game::m_managePlayerInput(string input1)
 {
-	m_puzzles[key] = new Puzzle(key, info1, info2, info3, info4, solution);
+	//string answer;
+	
+	if (input1 == m_pCurrentRoom->m_getRequiredInput())
+	{
+		m_gameRooms.remove(m_pCurrentRoom);
+	}
+	else if (input1 == "CALL DOG")
+	{
+		cout << "Seems the dog you heard has taken a liking to you! He is following you around... \n" << endl;
+		setDog(true);
+	}
+	else
+	{
+		cout << "Incorrect input try again...\n" << endl;
+	} 
 }
 
-void Game::m_managePlayerInput(string input1, string input2)
+void Game::m_displayGameEnding(int ending)
 {
-	if (input1 == "GO")
+	// Used to skip unused text in text file
+	string word;
+
+	ifstream dataFile("NewGame.txt", ios::in);
+
+	if (!dataFile)
 	{
-		if(input2 == "RIGHT")
-		{
-			if (m_pCurrentRoom->m_canUsePath(RIGHT))
-			{
-				// Move to that room
-			}
-		}
-		if (input2 == "LEFT")
-		{
-			if (m_pCurrentRoom->m_canUsePath(LEFT))
-			{
-				// Move to that room
-			}
-		}
-		if (input2 == "BACK")
-		{
-			if (m_pCurrentRoom->m_canUsePath(BACK))
-			{
-				// Move to that room
-			}
-		}
-	}
-	if (input1 == "INTERACT")
-	{
-		if (input2 == "WIRES")
-		{
-			if (m_pCurrentRoom->m_getKey() == "ASYLUM")
-			{
-				// Use the puzzle
-			}
-		}
-		if (input2 == "RADIO")
-		{
-			if (m_pCurrentRoom->m_getKey() == "KITCHEN")
-			{
-				// Use the puzzle
-			}
-		}
-		if (input2 == "COMPUTER")
-		{
-			if (m_pCurrentRoom->m_getKey() == "OFFICE")
-			{
-				// Use the puzzle
-			}
-		}
-		if (input2 == "SAFE")
-		{
-			if (m_pCurrentRoom->m_getKey() == "SECURITY")
-			{
-				// Use the puzzle
-			}
-		}
-		if (input2 == "KEYPAD")
-		{
-			if (m_pCurrentRoom->m_getKey() == "NURSE")
-			{
-				/*if (Player has all the code)
-				{
-					Use the puzzle
-				}*/
-			}
-		}
+		cout << "Error opening file.";
 	}
 
-    return string();
+	// Local variables used to store info from the text file that will be used to output the ending
+	string line1, line2, line3, line4, line5, line6, line7, line8, line9;
+
+	// Cout the ending based on whether the player has the dog or not
+	switch (ending)
+	{
+	case 1:
+		while (dataFile >> word)
+		{
+			if (word == "WRONG")
+			{
+				dataFile.ignore();
+				getline(dataFile, line1);
+				getline(dataFile, line2);
+				getline(dataFile, line3);
+				getline(dataFile, line4);
+				getline(dataFile, line5);
+				getline(dataFile, line6);
+				getline(dataFile, line7);
+				getline(dataFile, line8);
+				getline(dataFile, line9);
+
+				cout << line1 << endl << line2 << endl << line3 << endl << line4 << endl << line5 <<
+					endl << line6 << endl << line7 << endl << line8 << endl << line9 <<"\n";
+			}
+		}
+		break;
+	case 2:
+		while (dataFile >> word)
+		{
+			if (word == "RIGHT")
+			{
+				dataFile.ignore();
+				getline(dataFile, line1);
+				getline(dataFile, line2);
+				getline(dataFile, line3);
+				getline(dataFile, line4);
+				getline(dataFile, line5);
+				getline(dataFile, line6);
+				getline(dataFile, line7);
+				getline(dataFile, line8);
+				getline(dataFile, line9);
+
+				cout << line1 << endl << line2 << endl << line3 << endl << line4 << endl << line5 <<
+					endl << line6 << endl << line7 << endl << line8 << endl << line9 << "\n";
+			}
+		}
+		break;
+	}
+	//Close the file
+	dataFile.close();
 }

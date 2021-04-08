@@ -15,48 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Inventory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Location.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Map.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Rooms.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Puzzle.h">
+    <ClInclude Include="List.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DynQueue.h">
-      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Inventory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Rooms.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Puzzle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DynQueue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
