@@ -52,7 +52,7 @@ void Game::m_RunGame()
 bool Game::m_buildGame()
 {
 	// Used to skip unused text in text file
-	string word;
+	/*string word;*/
 
 	ifstream dataFile("NewGame.txt", ios::in);
 
@@ -63,13 +63,13 @@ bool Game::m_buildGame()
 	}
 
 	// Local variables used to store info from the text file that will be used to create room objects & puzzles
-	string name, underline, story1, story2, story3, story4, inputRequired;
+	string word, name, underline, story1, story2, story3, story4, inputRequired;
 	
 	while (dataFile >> word)
 	{
 		if (word == "ROOMSTART")
 		{
-			dataFile >> word;
+			dataFile.ignore();
 			getline(dataFile, name);
 			getline(dataFile, underline);
 			getline(dataFile, story1);
@@ -103,7 +103,7 @@ void Game::m_managePlayerInput(string input1)
 	}
 	else if (input1 == "CALL DOG")
 	{
-		cout << "Seems the dog you heard has taken a liking to you! \n" << endl;
+		cout << "Seems the dog you heard has taken a liking to you! He is following you around... \n" << endl;
 		setDog(true);
 	}
 	else
@@ -147,7 +147,7 @@ void Game::m_displayGameEnding(int ending)
 				getline(dataFile, line9);
 
 				cout << line1 << endl << line2 << endl << line3 << endl << line4 << endl << line5 <<
-					endl << line6 << endl << line7 << endl << line8 << endl << line9;
+					endl << line6 << endl << line7 << endl << line8 << endl << line9 <<"\n";
 			}
 		}
 		break;
@@ -168,7 +168,7 @@ void Game::m_displayGameEnding(int ending)
 				getline(dataFile, line9);
 
 				cout << line1 << endl << line2 << endl << line3 << endl << line4 << endl << line5 <<
-					endl << line6 << endl << line7 << endl << line8 << endl << line9;
+					endl << line6 << endl << line7 << endl << line8 << endl << line9 << "\n";
 			}
 		}
 		break;
