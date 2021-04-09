@@ -4,7 +4,7 @@ THE FOREST
 You wake up suddenly in a forest in the dead of night.
 You have no recollection of who you are or how you got here.
 It is raining heavily, and you are soaking wet.
-You see a clearing up AHEAD.
+You see a road to your LEFT, and a clearing up AHEAD.
 GO FORWARD
 ROOMSTART
 CLEARING IN THE FOREST
@@ -181,3 +181,9 @@ You slowly approach the bush, afraid of what could be hiding within. You careful
 It reveals a wolf. It makes eye contact and begins to growl louder.
 You reach out and carefully pet the wolf. It calms down and begins to lick your hand. The wolf seems to be innocent enough.
 You decide to take the wolf with you to seek shelter from the rain. You both make your way towards the building...
+
+DEAD
+You climb up a small hill to reach the road.
+You slip on some wet leaves, causing you to stumble and fall onto the road.
+You scramble to get up, but you just aren't quick enough.
+You are hit by an 18 wheeler truck and killed instantly.

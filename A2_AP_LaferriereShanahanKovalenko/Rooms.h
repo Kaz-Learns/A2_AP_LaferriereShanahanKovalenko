@@ -17,6 +17,7 @@ public:
 	void m_setUpRoom(string name, string underline, string story1, string story2, string story3, string story4, string inputRequired);
 	void m_displayRoom();
 	string m_getRequiredInput();
+	string m_getRoomName();
 
 private:
 

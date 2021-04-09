@@ -36,6 +36,11 @@ string Rooms::m_getRequiredInput()
     return m_inputRequired;
 }
 
+string Rooms::m_getRoomName()
+{
+    return m_roomName;
+}
+
 
 
 

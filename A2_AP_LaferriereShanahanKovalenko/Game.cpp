@@ -105,7 +105,7 @@ void Game::m_managePlayerInput(string input1)
 	{
 		m_gameRooms.remove(m_pCurrentRoom);
 	}
-	else if (input1 == "GO RIGHT")
+	else if (input1 == "GO RIGHT" && m_pCurrentRoom->m_getRoomName() == "CLEARING IN THE FOREST")
 	{
 		m_gameRooms.remove(m_pCurrentRoom);
 
@@ -137,6 +137,34 @@ void Game::m_managePlayerInput(string input1)
 		}
 
 		dataFile.close();
+	}
+	else if (input1 == "GO LEFT" && m_pCurrentRoom->m_getRoomName() == "THE FOREST")
+	{
+		string word, line1, line2, line3, line4;
+
+		ifstream dataFile("NewGame.txt", ios::in);
+
+		if (!dataFile)
+		{
+			cout << " Error opening file.";
+		}
+
+		while (dataFile >> word)
+		{
+			if (word == "DEAD")
+			{
+				dataFile.ignore();
+				getline(dataFile, line1);
+				getline(dataFile, line2);
+				getline(dataFile, line3);
+				getline(dataFile, line4);
+
+				cout << " " << line1 << "\n " << line2 << "\n " << line3 << "\n " << line4 << "\n\n";
+			}	
+		}
+
+		dataFile.close();
+		m_setRunning(false);
 	}
 	else
 	{
